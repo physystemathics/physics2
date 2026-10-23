@@ -1,0 +1,1828 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>FISICA-II</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <style>
+    .main{
+        margin: 0px;
+        padding: 10px 50px ;
+        font-family: Arial;
+        font-size: 35px;
+        background: #f8e00b;
+        background: hsl(60, 100%, 80%);
+        /* background: #ffffffff; */
+        }
+    .escala:hover{
+        transition: 1.5s;
+        scale: 1.4;
+    }
+    .escala1:hover{
+        transition: 1.5s;
+        scale: 1;
+    }
+    .disp{
+        font-size: 1em;
+    padding: 1rem;
+    display: inline-block;
+    border: solid 3px red;
+    
+    }
+    .zoomder {
+      width: 100%;
+      transition: transform 0.3s;
+      transform-origin: left center;
+    }
+    .zoomder:hover{
+      transform: scale(1.8);
+    }
+    /*ul.reloj-pc{
+      font-family: 'Consolas', monospace;
+      font-size: 1.2rem;
+      background: #111827;
+      color: #00ff88;
+    }
+    ul.reloj-pc li{
+      margin:10px 0;
+      font-size: 1.1rem;
+    }
+    .hora-grande {
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }*/
+
+    
+
+</style>
+<style>
+
+  #li-reloj {
+      background-color: #111827;
+      color: #00ff88;
+      padding: 1px;
+      border-radius: 8px;
+      font-size: 3.5rem;
+      font-weight: bold;
+      font-family: 'Consolas', monospace;
+      text-align: center;
+
+    }
+</style>
+/* para animacion gif y png */
+<link  rel="stylesheet" href="styles.css">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Updated: Apr 20 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+                      <!-- 
+                      <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>-->
+                      <!-- desxativar internet -->
+                      <!----><script id="MathJax-script" async src="./js/texmmlchtml.js"></script> 
+                      <script>
+                          MathJax = {
+                            tex: {
+                              inlineMath: [['$', '$'], ['\\(', '\\)']]
+                            },
+                            svg: {
+                              fontCache: 'global'
+                            }
+                          };
+                      </script>
+                      <script type="text/javascript" id="MathJax-script" async
+                          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+                      </script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center" style="background-color: rgb(13, 80, 43);">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block text-white">  FISICA II</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn text-white"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+    
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+         <li class="">
+          <a class="nav-link nav-icon" href="index.html">
+            <img src="assets/img/logo.png" alt="">
+            <span class="badge bg-primary badge-number">1</span>
+          </a><!-- End Notification Icon -->
+        </li><!-- End Notification Nav -->
+        
+        <li class="">
+          <a class="nav-link nav-icon" href="index.html">
+            <img src="assets/img/logo.png" alt="">
+            <span class="badge bg-primary badge-number">2</span>
+          </a><!-- End Notification Icon -->
+        </li><!-- End Notification Nav -->
+        
+        <li class="">
+          <a class="nav-link nav-icon" href="index.html">
+            <img src="assets/img/logo.png" alt="">
+            <span class="badge bg-primary badge-number">3</span>
+          </a><!-- End Notification Icon -->
+        </li><!-- End Notification Nav -->
+
+        
+        <li id="li-reloj">
+          00:00:00
+        </li>
+
+
+      </ul>
+
+      <script>
+        function actualizarHora(){
+          const ahora=new Date();
+          const hora= ahora.toLocaleTimeString('es-BO',{ hour12:false});
+          document.getElementById('li-reloj').textContent=hora;
+        }
+        
+        actualizarHora();
+        setInterval(actualizarHora, 1000);
+      </script>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar" style="background-color: rgb(0, 80, 0);">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed text-white" style="background-color: rgb(0, 90, 0);" href="index.html">
+          <i class="bi bi-person"></i>
+          <span >PERFIL</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item" >
+        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="description.html">
+          <i class="bi bi-grid text-white"></i>
+          <span>DESCRIPCIÓN</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item" >
+        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="contents.html">
+          <i class="bi bi-menu-button-wide text-white"></i>
+          <span>CONTENIDO</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item" >
+        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="bibliografia.html">
+          <i class="bi bi-menu-button-wide text-white"></i>
+          <span>BIBLIOGRAFÍA</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      
+      <li class="nav-heading">MÓDULOS</li>
+      
+      <li class="nav-item">
+        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="mod1.html">
+          <i class="bi bi-menu-button-wide"></i>
+          <span>MÓDULO I</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="mod2.html">
+          <i class="bi bi-menu-button-wide"></i>
+          <span>MÓDULO II</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="mod3.html">
+          <i class="bi bi-menu-button-wide"></i>
+          <span>MÓDULO III</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+  <main id="main" class="main">
+    <p class="iem" id="2.1"><b>4	CALOR Y TEMPERATURA</b><br>
+    <p><b>4.1	PRINCIPIOS FUNDAMENTALES</b><br>
+    <p><b>4.1.1	Calor</b><br>
+    <p>El calor es una forma de manifestaci&oacute;n de la energía, por lo tanto sus unidades son de energía;
+       JOULE [ J ] , Cal, BTU.</p>
+    <p><b>4.1.2	Temperatura</b><br>
+    <p>La temperatura es el grado de calor que tiene un cuerpo o el grado de 
+      sensación de caliente o fr&iacute;o y sus unidades son:  [℃],[℉],[K]. </p><br>
+        <figure>
+            <center><img class="" src="img/Calor.jpg" width="50%"></center>
+            <figcaption class="text text-center text-primary h4"><i><b>Figura 4-1 </b>Calor y Temperatura</i>
+            </figcaption>      
+         </figure><br>
+    <p><b>4.1.3	Descripción macroscópica de la materia</b></p>
+    <p>Para describir el comportamiento de los fenómenos del calor, consideramos un sistema termodinámico que 
+      es una porción del universo, que está rodeado por su medio ambiente.</p>
+      <figure>
+        <center><img class="" src="img/macroscopicotemp.png" width="70%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 4-2a </b>Descripción macroscópica de la materia</i>
+        </figcaption>      
+     </figure>
+    <p>El sistema puede o no interactuar con su medio ambiente o sea ser un sistema abierto o cerrado donde exista intercambio
+       de variables termodinámicas, como ser: temperatura, presión, calor o masa</p>
+       <figure>
+        <center><img class="" src="img/Sistemainteractuar.jfif" width="50%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 4-2b </b>Interacción con su medio ambiente</i>
+        </figcaption>      
+        </figure>
+    <p>El sistema puede ser cerrado, abierto o aislado:</p>
+      <figure>
+      <center><img class="" src="img/tipostermodinamicos.png" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-3 </b>Tipos de Sistemas Termodinámicos</i>
+      </figcaption>      
+      </figure>
+    <p><b>4.1.4	Punto de vista para el estudio de los fenómenos físicos en un sistema</b></p>
+    Los sistemas se estudian desde dos puntos de vista: 
+    <ul><ul><ul><li>Microscópico</li></ul></ul>
+    <ul><ul><li>Macroscópico</li></ul></ul></ul>
+    <p><b>Por ejemplo:</b></p>
+    <p>La presión desde un punto de vista microscópico 
+    se debe al choque de las moléculas con las paredes del recipiente que contiene un fluido.</p>
+    <center><img class="" src="img/presionrecipiente.png" width="50%"></center>
+    <p>La presión desde un punto de vista macroscópico en un fluido a de ser la fuerza que ejerce todas las 
+      mol&eacute;culas sobre un &aacute;rea. </p>
+      \[p=\frac{F}{A}\]
+   
+    
+    <p><b>4.1.5	Separación de moléculas debido a la temperatura</b><br>
+        <figure>
+            <center><img class="" src="img/moleculas.png" width="70%"></center>
+            <figcaption class="text text-center text-primary h4"><i><b>Figura 4-4 </b>Separación de moléculas</i>
+            </figcaption>      
+          </figure><br>
+    <p><b> Nota.-</b> La energía que tienen las moléculas puede ser: Cinética traslacional, rotacional y vibracional.</p>  
+    <p><u> Energía cinética traslacional</u></p>
+          \[E_{ct}=\frac{1}{2}mv^2\]
+          <p><u>Energía cinética rotacional</u></p>
+          \[E_{cr}=\frac{1}{2}I&omega;^2\]
+          <p><u> Energía cinética vibracional</u></p>
+          \[E_{v}=\frac{1}{2}&alpha;&beta;^2\]
+    <figure>
+      <center><img class="" src="img/tiposenergia.jpg" width="80%"></center>
+      <center><img class="" src="img/vibracion.png" width="40%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-5 </b>Tipos de Energía</i>
+      </figcaption>      
+      </figure>
+    
+    <p>La energía total:</p>
+    \[E_{total}=E_{ct}+E_{cr}+E_{v}\]
+    <div class="row border-danger ">
+      <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+        \[E_{total}=\frac{1}{2}mv^2 + \frac{1}{2}I&omega;^2 + \frac{1}{2}&alpha;&beta;^2\]  
+      </div>
+      <!-- NOMBRE FORMULA -->
+      <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+          <center><b>Ecuación 4.1</b></center>
+      </div>
+  </div>
+             
+   <p>Nos da el principio de equipartición de la energía.</p>
+   <p>En cu&aacute;ntos grados de libertad, se tendr&iacute;a:</p>
+   <ul>
+    <li>	Si se mueve sobre un eje	→ 1°grado de libertad</li>
+    <li>	Si se mueve en el plano	→ 2° grados de libertad </li>
+    <li>	Si mueve en el espacio	→ 3° grados de libertad</li>
+   </ul>
+   <p><b>Ejemplo:</b></p>
+   <figure>
+    <center><img class="" src="img/gradoslibertad.jpg" width="70%"></center>
+    <figcaption class="text text-center text-primary h4"><i><b>Figura 4-6 </b>Grados de Libertad</i>
+    </figcaption>      
+   </figure><br>
+   <p>Algunas diferencias entre calor y temperatura:</p>
+   <table border="5">
+    <tr><td bgcolor="cyan">Temperatura</td><td bgcolor="yellow">Calor</td></tr>
+    <tr><td>Es propiedad intensiva</td><td>Es propiedad extensiva (depende de la cantidad de materia)</td></tr>
+    <tr><td>Se mide directamente</td><td>Medición indirecta</td></tr>
+    <tr><td>Variable de estado</td><td>Variable de recorrido</td></tr>
+   </table>
+   <p><b>4.1.6	Unidades de calor y temperatura:</b></p>
+   <ul><ul><ul><li><u> Calor</u>.- Forma de energía, las unidades son: [ J ],[erg],[cal],[BTU]</li></ul></ul>
+   <ul><ul><li><u>Temperatura</u>.- Grado de calor que tiene un sistema, las unidades son:[℃],[℉],[K],[R]</li></ul></ul></ul>
+   <p><b>4.1.7	Medición de temperatura</b></p>
+   <p>La temperatura de los sistemas se mide con el termómetro, para construir un termómetro necesitamos una sustancia termométrica,
+     que puede ser sólido, líquido o gas y tiene que tener una propiedad termométrica. </p>
+     <table border="5">
+      <tr><td bgcolor="cyan">Sustancia termométrica</td><td bgcolor="yellow">Propiedad termométrica</td></tr>
+      <tr><td>Sólido</td><td>Varía su resistencia</td></tr>
+      <tr><td>Líquido [Hg]</td><td>Dilatación</td></tr>
+      <tr><td>Gas: (PV=nRT)</td><td>V=CTTE, P=f(T°C)</td></tr>
+     </table><br>
+     <figure>
+      <center><img class="" src="img/mediciontemp.jpg" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-7 </b>Medición de Temperatura</i>
+      </figcaption>      
+     </figure><br>
+   <p><b>4.2	Escala termométrica</b></p>
+    Las más utilizadas son:
+    <ul><ul><ul><li>Celsius</li></ul></ul>
+    <ul><ul><li>Fahrenheit</li></ul></ul>
+    <ul><ul><li>Absoluta o Kelvin</li></ul></ul></ul>
+    Se toma en cuenta el punto de fusión y ebullición del agua a 1 atm de presión. <br>
+    <figure>
+      <center><img class="" src="img/escalastermo.jpg" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-8 </b>Escalas Termométricas</i>
+      </figcaption>      
+     </figure><br>
+    <p><b>4.2.1	La escala absoluta de temperatura (Cero Absoluto)</b></p>
+    <figure>
+      <center><img class="" src="img/escalaabsoluta.png" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-9 </b>Escala Absoluta</i>
+      </figcaption>      
+     </figure><br>
+    <p><b>4.2.2	Ecuación propia de escala </b></p>
+    <div class="row border-danger">
+    <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+      \[T=273 \frac{P(x)}{P\;triple\;del\; H_2 O}\]
+    </div>
+    <!-- NOMBRE FORMULA -->
+    <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+        <center><b>Ecuación 4.2</b></center>
+    </div>
+    </div>
+    
+    <p><b>4.2.3	La relación entre escalas</b></p>
+    \[\frac{℃}{100}=\frac{℉-32}{180}=\frac{K-273}{100}=\frac{R}{80}\]
+    \[\frac{℃}{5}=\frac{℉-32}{9}\]
+    \[K=℃+273\]
+    \[°R=°F+460\]
+    <div class="row border-danger">
+      <div class="col-md-10 pt-3 pb-3 border border-danger h1 escala">
+        \[\frac{℃}{5}=\frac{℉-32}{9}=\frac{K-273}{5}=\frac{R}{4}\]
+      </div>
+      <!-- NOMBRE FORMULA -->
+      <div class="col-md-2 pt-3 pb-3 border border-danger h4">
+          <center><b>Ecuación 4.3</b></center>
+      </div>
+      </div><br>
+    
+    <p><b>4.2.4	Tipos de termómetros <br>4.2.4.1	Termómetro de mercurio </b>“Bulbo, capilar”</p>
+    Temperatura normal de una persona:  T=37℃
+    <figure>
+      <center><img class="" src="img/termhg.jpg" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-10 </b>Termómetro de mercurio </i>
+      </figcaption>      
+     </figure><br>
+     <p><b>4.2.4.2	Termómetro de resistencia eléctrica</b></p>
+     <figure>
+      <center><img class="" src="img/termres.png" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-11 </b>Termómetro de Resistencia Eléctrica </i>
+      </figcaption>      
+     </figure><br>
+     <p>La resistencia varía con la temperatura</p>
+     \[R_t=R_{t0}(1+&alpha;&Delta;t)\]
+     <p>Existen resistencias cuyo valor aumenta o disminuye con la temperatura y son los termistores NTC y PTC.</p>
+     <figure>
+      <center><img class="" src="img/termistores.jpg" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-12 </b>Termistores</i>
+      </figcaption>      
+     </figure><br>
+     <p><b>4.2.4.3	Pirómetro óptico</b></p>
+     <figure>
+      <center><img class="" src="img/CircuitoPiro.png" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-13 </b>Circuito Pirómetro</i>
+      </figcaption>      
+     </figure><br>
+     <figure>
+      <center><img class="" src="img/pirometro.jpg" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-14 </b>Pirómetro</i>
+      </figcaption>      
+     </figure><br>
+     <p>Se emplea el concepto de temperatura de color.</p>
+     <figure>
+      <center><img class="" src="img/tempcolor.jpg" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-15 </b>Temperatura de color</i>
+      </figcaption>      
+     </figure><br>
+     <p><b>4.2.4.4	Termocupla</b></p>
+     <p>Mide elevadas temperaturas. Y tiene dos materiales de diferente coeficiente de dilatación térmica.</p>
+     \[&alpha;_1=&alpha;_2\]
+     <figure>
+      <center><img class="" src="img/Esquematermocupla.gif" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-16 </b>Esquema Termocupla</i>
+      </figcaption>      
+     </figure><br>
+     <figure>
+      <center><img class="" src="img/termocupla1.png" width="70%"></center>
+      <center><img class="" src="img/termocupla2.png" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-17 </b>Termocupla</i>
+      </figcaption>      
+     </figure><br>
+     <p><b>4.2.4.5	Termómetro de gas a volumen constante</b></p>
+     <figure>
+      <center><img class="" src="img/termgas1.jpg" width="30%"><img class="" src="img/termgas2.jpg" width="30%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-18 </b>Termómetro de gas a volumen constante</i>
+      </figcaption>      
+     </figure><br>
+     <p><b>4.2.4.6	Termómetro Laser</b></p>
+     <figure>
+      <center><img class="" src="img/termolaser.jpg" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-19 </b>Termómetro Laser</i>
+      </figcaption>      
+     </figure><br>
+     <p><b>4.2.4.7	Termógrafos</b></p>
+     <figure>
+      <center><img class="" src="img/termografo.jpg" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-20 </b>Termógrafo</i>
+      </figcaption>      
+     </figure><br>
+     <p><b>4.3	Efectos de la temperatura sobre los cuerpos</b></p>
+     <ul>Cuando se varía la temperatura de un sistema podemos tener: 
+            <ul><ul><li>Dilatación térmica.</li></ul></ul>
+            <ul><ul><li>Esfuerzos de origen térmico </li></ul></ul>
+            <ul><ul><li>Cambio de fase</li></ul></ul>
+            <ul><ul><li>Circulación de corriente eléctrica</li></ul></ul></ul>
+      <p>La dilatación puede ser positiva o negativa y consideramos tres casos: Lineal, superficial y volumétrica. Suponemos
+         que el coeficiente de dilatación permanece constante no varía. (Medio isotrópico) </p><br>
+         <figure>
+          <center><img class="" src="img/EfectosTemp.png" width="70%"></center>
+          <figcaption class="text text-center text-primary h4"><i><b>Figura 4-21</b>Efectos de la temperatura sobre los cuerpos</i>
+          </figcaption>      
+         </figure><br>
+      <p>Para el caso del agua</p>
+        <figure>
+          <center><img class="" src="img/EfecAgua.jpg" width="70%"></center>
+          <figcaption class="text text-center text-primary h4"><i><b>Figura 4-22</b>Efectos térmicos para el Agua</i>
+          </figcaption>      
+        </figure><br>
+      <p>Dilatación de líquidos</p>
+        <figure>
+          <center><img class="" src="img/DilatLiq.jpg" width="70%"></center>
+          <figcaption class="text text-center text-primary h4"><i><b>Figura 4-23</b>Dilatación de Líquidos</i>
+          </figcaption>      
+        </figure><br>
+      <table class="table table-striped table-bordered">
+        <tr><th>DILATACI&Oacute;N</th><th>ESQUEMA</th><th>ECUACI&Oacute;N</th><th>COEFICIENTE</th></tr>
+        <tr>
+        <td>
+          Lineal:
+        <ul>
+          <li>Antenas</li>
+          <li>Cables</li>
+          <li>Puentes</li>
+          <li>Rieles</li>
+        </ul>
+        </td>
+        <td><center><img class="" src="img/lineal.png" width="110%"></center></td>
+        <td>
+          \[x_f=x_0 \left(1+\alpha \Delta T\right)\]
+          \[L_f=L_0 \left(1+\alpha \Delta T\right)\]
+        </td>
+        <td>
+          \[\alpha=\frac{\Delta T}{L_0}\frac{1}{\Delta T}\]
+          Coeficiente de <br> Dilataci&oacute;n Lineal
+          \[\alpha=10^{-6}\left[\frac{1}{^`C}\right] \]
+        </td>
+        </tr>
+        <tr>
+        <td>
+          Superficial
+          <ul>
+            <li>Calaminas</li>
+            <li>Hornos <br>(curveados)</li>
+            <li>Pavimento <br>(Autopista)</li>
+            <li>Ventanas</li>
+            <li>Vidrios</li>
+          </ul>
+        </td>
+        <td><center><img class="" src="img/superficial.png" width="110%"></center></td>
+        <td>
+          \[x_f=x_0 \left(1+\alpha \Delta T\right)\]
+          \[y_f=y_0 \left(1+\alpha \Delta T\right)\]
+          \[\alpha^2= \left( 10^{-6}\right)^2=0\]
+          \[A_f=A_0 \left(1+2\alpha \Delta T\right)\]
+          \[A_f=A_0 \left(1+\beta \Delta T\right)\]
+        </td>
+        <td>
+          \[\beta=2\alpha\]
+          Coeficiente de <br>Dilataci&oacute;n Superficial
+        </td>
+        </tr>
+        <tr>
+        <td>
+        Volum&eacute;trica
+        <ul>
+          <li>S&oacute;lidos</li>
+          <li>L&iacute;quidos</li>
+          <li>Gases</li>
+        </ul>
+        </td>
+        <td><center><img class="" src="img/volumetrica.png" width="110%"></center></td>
+        <td>
+          \[x_f=x_0 \left(1+\alpha \Delta T\right)\]
+          \[y_f=y_0 \left(1+\alpha \Delta T\right)\]
+          \[z_f=z_0 \left(1+\alpha \Delta T\right)\]
+          \[V_f=V_0 \left(1+3\alpha \Delta T\right)\]
+          \[V_f=V_0 \left(1+\gamma \Delta T\right)\]
+        </td>
+        <td>
+          \[\gamma=3\alpha\]
+          Coeficiente de <br>Dilataci&oacute;n Volumétrica
+        </td>
+        </tr>
+      </table>
+      <p><b>4.3.1	Esfuerzos de origen térmico.</b></p>
+      <figure>
+        <center><img class="" src="img/EsfTer.jpg" width="70%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 4-24</b>Esfuerzo Térmico</i>
+        </figcaption>      
+      </figure><br>
+      Ley de Hooke: 
+      \[\sigma=\frac{F}{A}.........(1)\]
+      Dilatación lineal:
+      \[L_f=L_0 \left(1+\alpha \Delta T\right)\]
+      \[\frac{\Delta L}{L_0}=\alpha \Delta T.........(2)\]
+      De (1) y (2):
+      \[\sigma =Y \alpha \Delta T\]
+      <p><b>Ejemplo: </b> Paredes (rajaduras)</p>
+      <p><b>4.4	Calor</b></p>
+      <p>Como el calor es una manifestación de energía sus unidades son: [ J ] aunque también se emplean 
+        las [cal], [Kcal] o [BTU] donde una caloría se define como la cantidad de calor que se proporciona 
+        a un gramo de agua para elevar su temperatura en 1 ℃ desde 15,5 ℃ a 16,5 ℃ a 1 [atm] de presión.</p>
+      \[1\;[Kcal] = 1000\;[cal]\]
+      <p>El [BTU] es la cantidad de calor que se debe proporcionar a 1 Lb de agua para elevar la temperatura
+         en  1 ℉.</p>
+      <p><b>4.4.1	El equivalente mecánico del calor: </b></p> 
+      <center><div class="col-md-6 border border-danger h1 escala text-center">
+        \[1 [cal] = 4,186 [J]\]
+      </div> </center>
+      
+      <p>En laboratorio</p>
+      <figure>
+        <center><img class="" src="img/Eqter1.jpg" width="60%"></center>
+        <center><img class="" src="img/Eqter2.jpg" width="40%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 4-25</b>Equivalente mecánico del calor</i>
+        </figcaption>      
+      </figure><br>
+      \[i^2 R t\]
+      
+      <p><b>4.4.2 Capacidad calorífica [C]</b></p>
+      <p>Cantidad de calor para elevar la temperatura de un sistema en 1 ℃.</p>
+      <div class="row border-danger">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+          \[C=\frac{\Delta Q}{\Delta t} [\frac{cal}{^o C}]\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 4.5</b></center>
+        </div>
+        </div><br>
+      
+      <figure>
+        <center><img class="" src="img/CapCal.png" width="50%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 4-26</b>Capacidad Calorífica</i>
+        </figcaption>      
+      </figure><br>
+
+      <p><b>Calor específico [c]</b></p>
+      <p>Cantidad de calor que se debe proporcionar a 1 [g] de sustancia para elevar la temperatura en 1 ℃.</p>
+      <figure>
+        <center><img class="" src="img/CalEsp.png" width="50%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 4-27a</b>Calor Específico</i>
+        </figcaption>      
+      </figure><br>
+      <p>En laboratorio</p>
+      <figure>
+        <center><img class="" src="img/Calesp1.jpg" width="70%"></center><br>
+        <center><img class="" src="img/Cesp.jpg" width="25%"></center>
+        
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 4-27b</b>Calor Específico</i>
+        </figcaption>      
+      </figure><br>
+      <div class="row border-danger">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+          \[C=\frac{1}{m} \frac{\Delta Q}{\Delta t} \left[\frac{cal}{g ^o C}\right]\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 4.6</b></center>
+        </div>
+        </div>
+      
+
+     <p><i>En gases:</i></p>
+     $C_v: $calor específico a volumen constante.
+    <p>Cantidad de calor que hay que proporcionar a 1[g] de gas manteniendo el volumen constante, V = Constante</p>
+    <div class="row border-danger">
+      <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+        \[C_v=\frac{1}{m}\frac{\Delta Q}{\Delta t}\]
+      </div>
+      <!-- NOMBRE FORMULA -->
+      <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+          <center><b>Ecuación 4.7</b></center>
+      </div>
+      </div>  
+    
+    <p>Calor específico molar a presión constante. p = constante</p>
+    <div class="row border-danger">
+      <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+        \[C_p=\frac{1}{n}\frac{\Delta Q}{\Delta t}\]
+      </div>
+      <!-- NOMBRE FORMULA -->
+      <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+          <center><b>Ecuación 4.8</b></center>
+      </div>
+      </div>
+    
+    $C_p: $calor específico a presión constante.
+    <div class="row border-danger">
+      <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+        \[C_p=\frac{1}{m}\frac{\Delta Q}{\Delta t}\]
+      </div>
+      <!-- NOMBRE FORMULA -->
+      <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+          <center><b>Ecuación 4.9</b></center>
+      </div>
+      </div>
+    
+    <p>El calor específico depende del número de grados de libertad</p>
+    <figure>
+      <center><img class="" src="img/gradLib.png" width="80%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-28</b>Grados de Libertad</i>
+      </figcaption>      
+    </figure><br>
+    <p><b>Relación de calores específicos </b></p>
+    \[C_p > C_v\]
+    <div class="row border-danger">
+      <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+        \[C_p-C_v=R\]
+      </div>
+      <!-- NOMBRE FORMULA -->
+      <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+          <center><b>Ecuación 4.10</b></center>
+      </div>
+      </div>
+    
+    <p><b>Constante adiabática:</b></p>
+    <div class="row border-danger">
+      <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+        \[\gamma=\frac{C_p}{C_v}\]
+      </div>
+      <!-- NOMBRE FORMULA -->
+      <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+          <center><b>Ecuación 4.11</b></center>
+      </div>
+      </div>
+    
+
+    <p><b>Calor de combustión [C]</b></p>
+    
+    <div class="row border-danger">
+      <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+        \[C=\frac{\Delta Q}{m}\]
+      </div>
+      <!-- NOMBRE FORMULA -->
+      <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+          <center><b>Ecuación 4.12</b></center>
+      </div>
+      </div><br>
+    <figure>
+      <center><img class="" src="img/CalorComb.jpg" width="70%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-29</b>Calor de Combustión</i>
+      </figcaption>      
+    </figure><br>
+    <p>Carbón de hulla 6000 kcal/kg</p>
+    \[C_{Hulla}=6000 \frac{Kcal}{kg}\]
+
+    <p><b>4.4.5	Curva de calentamiento del agua. </b>Calor latente y calor sensible</p>
+    <figure>
+      <center><img class="" src="img/CalLat1.jpg" width="50%"></center><br>
+      <center><img class="" src="img/CalLat2.png" width="55%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-30</b>Calor Latente y Calor Sensible</i>
+      </figcaption>      
+    </figure><br>
+    <p>Calor latente de fusión: $80\frac{Kcal}{kg}$</p>
+    <p>Calor latente de vaporización: $540 \frac{Kcal}{kg}$</p>
+
+    <p><b>4.4.6	Cambio de Estado</b></p>
+    <figure>
+      <center><img class="" src="img/CamEst.png" width="50%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-31</b>Cambio de Estado</i>
+      </figcaption>      
+    </figure><br>
+    <p><b>4.4.7	Punto triple del agua</b></p>
+    <figure>
+      <center><img class="" src="img/PuntoTrip.jpg" width="35%"></center>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 4-32</b>Punto Triple del Agua</i>
+      </figcaption>      
+    </figure><br><br><br>
+
+
+
+    <hr> <hr><br>
+    <p><b>5	TRANSMISIÓN DE CALOR</b></p>
+    <p><b>5.1	Ley cero de la termodinámica</b></p>
+    <p>Se refiere el equilibrio térmico: </p>
+    <p><i>“Cuando dos sustancias se encuentran durante largo tiempo en contacto físico, entonces ambas 
+      adquieren la misma temperatura final”</i></p>
+      <figure>
+        <center><img class="" src="img/fig5-1.jpg" width="60%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 5-1</b>Ley cero de la termodinámica</i>
+        </figcaption>      
+      </figure>
+      \[T_1 > T_2\]
+      \[T_1 > T_f > T_2\]
+      <p>O también: si se tiene un sistema “A” en equilibrio térmico con un sistema “B” (puede ser un termómetro) 
+        y si se tiene también un sistema “B” también en equilibrio térmico con “C” entonces “A” y “C” se encuentran en equilibrio térmico. </p>
+      <figure>
+        <center><img class="" src="img/EqTer.jpg" width="80%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 5-2</b>Equilibrio Térmico</i>
+        </figcaption>      
+      </figure><br>
+      <figure>
+      <p><b>5.2 Cantidad de calor</b></p>
+      <p>Los cuerpos pueden absorber o ceder calor. La cantidad de calor que absorbe o cede un sistema
+        depende de su masa. </p>
+      <center><img src="img/fig5-2a.png" width="60%" alt=""></center>
+      \[\Delta Q \propto m\]
+      \[\Delta Q \propto \Delta T\]
+      <div class="row border-danger">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+          \[\Delta Q=c\;m\; \Delta T\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 5.1</b></center>
+        </div>
+        </div>
+      <p>En términos diferenciales:</p>
+      <div class="row border-danger">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+          \[dQ=c\;m\; dT\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 5.2</b></center>
+        </div>
+        </div>
+        <p>*Calor: energía </p>
+        <p><b>El Calor:</b></p>
+        <div class="row border-danger">
+          <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+            \[\Delta Q=\int_{T_0}^{T_f} c\;m\mathrm{d}T=c\;m\; \Delta T\]
+          </div>
+          <!-- NOMBRE FORMULA -->
+          <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+              <center><b>Ecuación 5.3</b></center>
+          </div>
+          </div><br><br>
+      
+      
+
+
+      <p><b>5.3	Transmisión de calor</b></p>
+      <p>El calor puede transmitirse debido a la diferencia de temperaturas entre dos sistemas y 
+        va siempre del sistema más caliente al sistema más frío o puede transmitirse mediante una
+         onda electromagnética con frecuencias correspondientes a los rayos infrarrojos (R.I.) 
+         existen tres formas de transmisión de calor: </p>
+      <ul><ul><ul>
+        <li>Radiación</li>
+        <li>Convección</li>
+        <li>Conducción </li>
+      </ul></ul></ul>
+      <figure>
+        <center><img class="" src="img/fig5-3b.jpg" width="70%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 5-3</b>Tipos de Transmisión de Calor</i>
+        </figcaption>      
+      </figure><br>
+      <p>El calor se transmite de fuentes de mayor a menor temperatura (T1 > T2)</p>
+       <center><img class="" src="img/fig5-4.jpg" width="60%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 5-4</b>Transmisión de Calor</i>
+        </figcaption>      
+      </figure><br>
+      <p><b>5.3.1	Radiación</b></p>
+      <p>Para este caso vamos a suponer que el calor se comporta como energía radiante. </p>
+       <center><img class="" src="img/fig5-5.jpg" width="50%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 5-5</b>Radiación</i>
+        </figcaption>      
+      </figure><br>
+
+      <center><img src="img/fig5-77.png" width="30%" alt=""></center>
+
+      \[H=&epsi;\;\sigma\;A\;T^4 \]
+      Donde: <br>
+      H: Flujo de calor [cal/s] <br>
+      $&epsi;: $ constante de emisividad $0 \le &epsi; \le 1 $   <br>
+      $\sigma: $ constante de Boltzmann <br>
+      A: &aacute;rea de la placa radiante <br>
+      T: Temperatura absoluta (K)
+      <br>\[H=\frac{\Delta Q}{\Delta t}\] \[H\propto T^4\]
+      <div class="row border-danger">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+          \[H=&epsi;\;\sigma\;A\;T^4 \]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 5.4</b></center>
+        </div>
+        </div>
+
+
+        <div class="row border-danger">
+          <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+            \[H=&epsi;\;\sigma\;A\;(T^4-T_s^4) \]
+          </div>
+          <!-- NOMBRE FORMULA -->
+          <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+              <center><b>Ecuación 5.5</b></center>
+          </div>
+          </div><br>
+
+      <p><b>Ejemplo.-</b> Calor de radiación infrarroja (R.I.)</p>
+      <figure>
+        <center><img class="" src="img/fig5-6.jpg" width="90%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 5-6</b>Espectro Electromagnético</i>
+        </figcaption>      
+      </figure><br>
+      <p><b>Curva de luz visible</b></p>
+      <figure>
+        <center><img class="" src="img/img.png" width="50%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 5-7</b>Curva de luz visible</i>
+        </figcaption>      
+      </figure><br>
+      <p><b>5.3.2	Convección</b></p>
+      <p>En este caso el calor se transmite debido al movimiento de la masa de un fluido y la cantidad de 
+        calor que lleva el fluido depende del calor específico, la masa y la temperatura.</p>
+        <figure>
+          <center><img class="" src="img/fig5-8.jpg" width="80%"></center>
+          <figcaption class="text text-center text-primary h4"><i><b>Figura 5-8</b>Convección Natural y Forzada</i>
+          </figcaption>      
+        </figure><br>
+        <div class="row border-danger">
+          <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+            \[H=k\;C\;m\;\Delta T\]
+          </div>
+          <!-- NOMBRE FORMULA -->
+          <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+              <center><b>Ecuación 5.6</b></center>
+          </div>
+          </div><br>
+
+        
+        <figure>
+          <center><img class="" src="img/fig5-9.png" width="80%"></center>
+          <figcaption class="text text-center text-primary h4"><i><b>Figura 5-9</b>Ley de Enfriamiento de Newton</i>
+          </figcaption>      
+        </figure><br>
+        <p><b>5.3.3	Conducción</b></p>
+        <p>En este caso el calor se transmite a través de un medio físico debido a la diferencia de temperatura y la 
+          ley que permite calcular el flujo de calor en un proceso estacionario se conoce como la ley de Fourier y 
+          se resume en la siguiente expresión matemática</p>
+          <figure>
+            <center><img class="" src="img/fig5-10.png" width="40%"></center>
+            <figcaption class="text text-center text-primary h4"><i><b>Figura 5-10</b>Ley de Fourier</i>
+            </figcaption>      
+          </figure><br>
+          <figure>
+            <center><img class="" src="img/fig5-11.png" width="30%"></center>
+            <figcaption class="text text-center text-primary h4"><i><b>Figura 5-11</b>Transferencia de Calor por Conducción</i>
+            </figcaption>      
+          </figure><br>
+
+          
+          \[H \; [\frac{cal}{s}]\]
+          El flujo de calor o tasa de calor
+          \[H \propto A\]
+          \[H \propto \Delta T\]
+          \[H \propto \frac{1}{\Delta x}\]
+
+          <div class="row border-danger">
+            <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+              \[H=-k\;A\;\frac{\Delta T}{\Delta x}\]
+            </div>
+            <!-- NOMBRE FORMULA -->
+            <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+                <center><b>Ecuación 5.7</b></center>
+            </div>
+            </div>
+            <p>La transmisión por conducción necesita de un medio físico y va de temperatura mayor a temperatura menor.
+             <br> En términos diferenciales. </p>
+             <div class="row border-danger">
+              <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+                \[H=-k\;A\;\frac{dT}{dx}\]
+              </div>
+              <!-- NOMBRE FORMULA -->
+              <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+                  <center><b>Ecuación 5.8</b></center>
+              </div>
+              </div>
+            <p>Donde:</p>
+            H: Flujo de calor <br>
+            k: Constante de Conducción <br>
+            A: Área <br>
+            $\frac{dT}{dx}: $ Gradiente de temperatura <br><br>
+
+           <b>NOTA:</b> k depende del tipo de material. <br>
+            (k: Muy alto en metales, k: Muy bajo en gases) 
+
+          <br><br><br>
+          <p><b>Ejemplo. – Hallar el flujo de calor (H) para un recipiente cilíndrico hueco cuyo radio interno es
+             “a” y cuyo radio externo es “b”, suponga “k” y que la temperatura interna es mayor a la temperatura 
+             interna es mayor a la temperatura externa y que el flujo de calor es radial (proceso estacionario).</b></p>
+          <center><img src="img/ejmplo5.png"  width="60%" alt=""></center>
+          <p>Soluci&oacute;n.-</p> Por Fourier.
+          <center><img src="img/img5a.png"  width="40%" alt=""></center>
+          \[H=-k\;A\;\frac{dT}{dr}\]
+          El &aacute;rea: $A=2\pi r L$ Envoltura cil&iacute;ndrica <br>
+          Luego: \[H=-k\;2\pi r L\;\frac{dT}{dr}\] 
+          \[\int_a^b \frac{dr}{r}=\frac{-2 \pi L k}{H} \int_{T_1}^{T_2} dT\]
+          \[ln(\frac{b}{a})=\frac{-2 \pi L k}{H} (T_2-T_1)\]
+          
+          <div class="row border-danger">
+            <center><div class="col-md-6 pt-3 pb-3 border border-danger h1">
+              \[H=\frac{2 \pi L k (T_1-T_2)}{ln(b/a)}\]
+            </div></center>
+            </div>
+
+    <br><br>
+    <hr><hr>
+    <br><br>
+    <p><b>6	ENERGÍA DE LOS PROCESOS TÉRMICOS</b></p>
+    <p><b>6.1	Ecuación de estado en un gas perfecto (Gas ideal) </b></p>
+    <p><b>6.1.1 Ley de Boyle.- </b>Para un gas ideal a temperatura constante es inversamente proporcional al volumen. </p>
+    \[ p\propto\frac{1}{V} \bigg |_{T=cte} \qquad   ;  \qquad    p=\frac{k}{V}\]
+    <p>Donde k es una constante.</p>
+    <p>Si: T=cte (curvas isotérmicas)</p>
+    <figure>
+      <center><img class="" src="img/fig6-1.png" width="40%"></center><br>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 6-1</b>Curvas isotérmicas</i>
+      </figcaption>      
+    </figure><br>
+    <p><b>6.1.2 Gay- Lussac.- </b>Isocóricas = isométricas</p>
+    \[ p\propto T \bigg |_{V=cte} \qquad   ;  \qquad    p=k \; T\]
+    <figure>
+      <center><img class="" src="img/fig6-2.png" width="40%"></center><br>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 6-2</b>Curva Isocora</i>
+      </figcaption>      
+    </figure><br>
+    <p><b>6.1.3 Ley de Charles.- </b>Isobáricas</p>
+    \[ V\propto T \bigg |_{p=cte} \qquad   ;  \qquad    V=k \; T\]
+    <figure>
+      <center><img class="" src="img/fig6-3.png" width="40%"></center><br>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 6-3</b>Curva Isobara</i>
+      </figcaption>      
+    </figure><br>
+    <p><b>6.2 La ecuación matemática para un gas perfecto:</b></p>
+    <div class="row border-danger">
+    <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+      \[pV=nRT\]
+    </div>
+    <!-- NOMBRE FORMULA -->
+    <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+        <center><b>Ecuación 6.1</b></center>
+    </div>
+    </div>
+    
+    <p>Donde:</p>
+    <ul><ul>
+      <li>$R=cte=0,082 \left[\frac{atm-l}{K mol}\right]$</li>
+      <li>$1\;mol=6,0.23*10^{-23}$ moléculas</li>
+      <li>n= # de moles$=\frac{m}{PM}$</li>
+    </ul></ul>
+    <p>Para dos estados del gas se cumple:</p>
+    <div class="row border-danger">
+      <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+        \[\frac{p_1 V_1}{T_1}=\frac{p_2 V_2}{T_2}\]
+      </div>
+      <!-- NOMBRE FORMULA -->
+      <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+          <center><b>Ecuación 6.2</b></center>
+      </div>
+      </div>
+    
+    <figure>
+      <center><img class="" src="img/fig6-4.png" width="50%"></center><br>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 6-4 </b>Leyes de los gases ideales</i>
+      </figcaption>      
+    </figure><br>
+    <figure>
+
+    <p><b>Estado: </b>Es un punto definido por las coordenadas termodinámicas. Macroscópicas P, T, V.</p>
+    <p>¿Para qué utilizamos la ecuación de estado?</p>
+    <p>Para encontrar P, V, T.</p>
+    <p><b>6.3 Ecuación de estado para gases reales</b></p>
+    <p><b>Ecuación de Van der Waals:</b> Las fuerzas de Van der Waals o interacciones de Van der Waals, son las fuerzas atractivas
+      o repulsivas entre mol&eacute;culas (o entre partes de una misma mol&eacute;cula) distintas a aquellas debidas a un enlace 
+    covalente o a la Interacción electroest&aacute;tica de iones con otros o con mol&eacute;culas neutras.</p>        
+    <div class="row border-danger ">
+      <center><div class="col-md-8 pt-1 pb-1 border border-danger h1 escala">
+        \[\left(p+\frac{n^2 a}{V^2}\right)\left(V-nb\right)=nRT\]
+      </div></center>
+    </div>
+  
+    <p>Donde: </p>
+    <ul><ul>
+      <li>p es la presión del fluido.</li>
+      <li>V es el volumen total del recipiente en que se encuentra el fluido.</li>
+      <li>a mide la atracción entre las part&iacute;culas $a=N_A^2 \; a^1$.</li>
+      <li>b es el volumen disponible de un mol de part&iacute;culas $b=N_A \; b^1$.</li>
+      <li>n es el n&uacute;mero de moles.</li>
+      <li>R es la constante universal de los gases ideales, $R=N_A\;k$.</li>
+      <li>T es la temperatura, en Kelvin.</li>
+    </ul></ul><br><br>
+    
+    <p><b>6.4 Trabajo y calor</b></p>
+    <p>Es posible transformar la energía térmica (calor) en trabajo y esto se aplica en el 
+      principio de funcionamiento de las máquinas térmicas. El calor es energía radiante que 
+      se transmite de mayor a menor temperatura y el trabajo es la fuerza por el desplazamiento (escalar).</p>
+    <p>Para explicar la transformación de calor en trabajo supondremos: </p>
+    <figure>
+      <center><img class="" src="img/fig6-5.jpg" width="60%"></center><br>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 6-5a </b>Trabajo y Calor</i>
+      </figcaption>      
+    </figure><br>
+      <p><b>Expansión</b></p>
+      <center><img class="" src="img/Trabcal.png" width="60%"></center><br>
+      <p>”El gas realiza el trabajo”</p>
+      <p>*Por principio de la conservación de la energía.</p>
+      \[\Delta Q = \Delta W\]
+      \[\Delta W=\int F\cdot\,dx=\int F\,dx\]
+      <p>Pero: $F=p\,A$</p>
+      \[\Delta W=\int p\,A\,dx\]
+      
+      <div class="row border-danger">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+          \[\Delta W=\iiint p\,dV\] 
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 6.3</b></center>
+        </div>
+        </div><br><br>
+    
+    <p><b>6.5	Primera ley de la termodinámica. </b></p>
+    <p>Se refiere al principio de conservación de la energía y dice que: “Si se proporciona calor a un sistema y este 
+      realiza trabajo entonces la diferencia entre calor suministrado y trabajo realizado es una constante que se denomina 
+      el cambio de la energía interna del sistema“.</p>
+      \[\Delta Q - \Delta W= constante\]
+      <div class="row border-danger">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+          \[\Delta Q - \Delta W=\Delta U\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 6.4</b></center>
+        </div>
+        </div>
+      
+      o también:
+      <div class="row border-danger">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+          \[\Delta Q = \Delta W + \Delta U\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 6.5</b></center>
+        </div>
+        </div>
+      
+      En términos diferenciales:
+      <div class="row border-danger">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+          \[dQ = dW + dU\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 6.6</b></center>
+        </div>
+        </div><br><br>
+      
+      <figure>
+        <center><img class="" src="img/fig6-5b.png" width="50%"></center><br>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 6-5b </b>Conservación de la energía</i>
+        </figcaption>      
+      </figure><br>
+
+
+      <p><b>Ejemplo. – Un constructor de motor térmico afirma que, si se suministra 100 J de energía al motor, este desarrolla 
+       un trabajo de 30 J con un cambio de energía interna de 80 J  ¿Qué opina Ud. al respecto? </b></p>
+       Datos: <br>
+       $\Delta Q= 100 J$ <br>
+       $\Delta W= 30 J$ <br>
+       $\Delta U= 80 J$ <br>
+
+      <b>Soluci&oacute;n:</b> <br>
+      Aplicando la primera ley 
+      \[\Delta Q = \Delta W + \Delta U\]
+      \[100 = 30 + 80\]
+      <div class="row border-danger ">
+        <center><div class="col-md-6 pt-1 pb-1 border border-danger h1 escala">
+          \[100 = 110 \qquad (Falso)\]
+        </div></center>
+      </div>
+       <br><br>
+
+      \[\Delta W \;\;\; Depende \;del \;camino\; recorrido\] <br>
+      \[\Delta U \;\;\; Es \;función\; de \;estado\] <br>
+
+      <p>El calor, depende si al sistema se proporciona a presión constante o a volumen constante</p><br>
+      <p><b>Si: p = Constante</b></p><br>
+      <div class="row border-danger">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+          \[\Delta Q=m\;C_p\;\Delta T\]
+          \[dQ=m\;C_p\;dT\]
+          \[dQ=n\;C_p\;dT\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 6.7</b></center>
+        </div>
+        </div><br>  
+      
+     <p><b>Si: V = Constante</b></p><br>
+     <div class="row border-danger">
+      <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+        \[\Delta Q=m\;C_V\;\Delta T\]
+        \[dQ=m\;C_V\;dT\]
+        \[dQ\;=n\;C_V\;dT\]
+      </div>
+      <!-- NOMBRE FORMULA -->
+      <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+          <center><b>Ecuación 6.8</b></center>
+      </div>
+      </div><br>
+      
+
+      <p>El cambio de energía interna siempre depende del $C_V$ (calor específico a volumen constante).</p>
+      <div class="row border-danger">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+          \[\Delta U=n\;C_V\;\Delta T\]
+          \[dU=n\;C_V\;dT\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 6.9</b></center>
+        </div>
+        </div>
+      
+      <p>Por lo tanto:</p>
+      <div class="row border-danger">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+          \[\Delta U=\int n\;C_V\;dT\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 6.10</b></center>
+        </div>
+        </div>
+       <br><br>
+      <p>Grados de libertad y calor especifico a volumen constante:</p>
+      <p>Para un gas monoatómico:</p>
+      <div class="row border-danger ">
+        <center><div class="col-md-6 pt-1 pb-1 border border-danger h1 escala">
+          \[C_V=\frac{3}{2}R\]
+        </div></center>
+      </div><br>
+      <div class="row border-danger">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+          \[C_V=\frac{N}{2}R\]
+          \[C_p=C_V+R\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 6.11</b></center>
+        </div>
+        </div><br>
+        \[C_p=C_V+R\] <br>
+        <div class="row border-danger ">
+          <center><div class="col-md-6 pt-1 pb-1 border border-danger h1 escala">
+            \[C_p=\frac{5}{2}R\]
+          </div></center>
+        </div><br>
+
+      <center><img src="img/1raLey.png" width="50%" alt=""></center><br>
+      <p><b>Nota.-</b> Para la 1° ley de la termodinámica existe una convención de signos.</p>
+      <center><img src="img/wqa.png" width="50%" alt=""></center><br>
+      <center><img src="img/wqb.png" width="50%" alt=""></center><br>
+      
+      <p><b>6.1.1	Aplicaciones</b></p>
+      <p><b>6.1.1.1	Estado de un sistema</b></p>
+      <p>Está definida por coordenadas termodinámicas p, V y T.</p>
+      <p><b>6.1.1.2	Proceso</b></p>
+      <p>Se define como el cambio de las coordenadas termodinámicas que puede sufrir un 
+        sistema y podemos hablar de procesos reversibles para los cuales es posible volver 
+        de condiciones finales a condiciones iniciales y de procesos irreversibles en los 
+        cuales no es posible volver de condiciones finales a condiciones iniciales.</p>
+      <p>Algunos procesos notables en termodinámica;</p> 
+      <ol><ol><ol>
+        <li>Proceso a temperatura constante (Isotérmico)</li>
+        <li>Proceso a presión constante (Isobárico)</li>
+        <li>Proceso a volumen constante (Isocórico)</li>
+        <li>Proceso adiabático (∆Q=0)</li>
+      </ol></ol></ol><br>
+      
+
+      <table class="table table-bordered border-dark table-striped h4">
+                            
+        <tr><td width="20%" Align="center"><b>Proceso</b></td>
+            <td width="15%" Align="center"><b>\[pV=nRT\]</b></td>
+            <td width="20%" Align="center"><b>\[\Delta W=\int p dV=A\]</b></td>
+            <td width="15%" Align="center"><b>\[\Delta U=\int n C_V dT\]</b></td>
+            <td width="15%" Align="center"><b>\[\Delta Q=\Delta U+\Delta W\]</b></td>
+            <td width="15%" Align="center"><b>Conclusi&oacute;n</b></td>
+        </tr>
+        <tr>
+          <td><img src="img/Tisot.png" width="100%" class="zoomder">ISOTÉRMICO</td>
+          <td>\[T=cte\] \[p=\frac{n R T}{V}\]</td>
+          <td>\[\Delta W=n R T ln\left(\frac{V_f}{V_0}\right)\]</td>
+          <td>\[\Delta U=0\]</td>
+          <td>\[\Delta Q=\Delta W\]</td>
+          <td>\[\Delta Q=\Delta W\]</td>
+        </tr>
+        <tr>
+          <td><img src="img/Tisob.png" width="100%" class="zoomder">ISOBÁRICO</td>
+          <td>\[p=cte\] \[V=\frac{n R T}{p}\]</td>
+          <td>\[\Delta W=p\left(V_f-V_0\right)\]</td>
+          <td>\[\Delta U=n C_V \left(T_f-T_0\right)\]</td>
+          <td>\[\Delta Q=\Delta W+\Delta U\]</td>
+          <td>\[\Delta Q=\Delta W+\Delta U\]</td>
+        </tr>
+        <tr>
+          <td><img src="img/Tisoc.png" width="100%" class="zoomder">ISOCÓRICO</td>
+          <td>\[V=cte\] \[p=\frac{n R T}{V}\]</td>
+          <td>\[\Delta W=0\]</td>
+          <td>\[\Delta U=n C_V \left(T_f-T_0\right)\]</td>
+          <td>\[\Delta Q=\Delta U\]</td>
+          <td>\[\Delta Q=\Delta U\]</td>
+        </tr>
+        <tr>
+          <td><img src="img/Tadia.png" width="100%" class="zoomder">ADIABÁTICO</td>
+          <td>\[pV^\gamma=cte\]</td>
+          <td>\[\Delta W=\frac{p_fV_f-p_0V_0}{1-\gamma}\]</td>
+          <td>\[\Delta U=n C_V \left(T_f-T_0\right)\]</td>
+          <td>\[\Delta Q=0\]</td>
+          <td>\[\Delta Q=0\]\[\Delta U=-\Delta W\]</td>
+        </tr>
+      </table><br>
+      <p><b>Demostrar.-</b>A partir de la primera ley que : </p> 
+      \[C_p-C_V=R\]
+      <p><b>Soluci&oacute;n:</b></p>
+      Si: 
+      \[\Delta U= n\;C_V\;dT\]
+      \[\Delta Q=\Delta H=n\;C_p\;dT\]
+      \[\Delta W= p\;dV\]
+      Primera ley:
+      \[\Delta Q=\Delta W+\Delta U\]
+      \[n\;C_p\;dT=p\;dV+n\;C_V\;dT\;...\;...(1)\]
+      Ec. de estado:
+      \[p\;V=n\;R\;T\;\;\;//d(\;)\]
+      \[p\;dV+V\;dp=n\;R\;dT\]
+      \[p\;dV=n\;R\;dT\;...\;...(2)\]
+      (2) en (1):
+      \[n\;C_p\;dT=n\;R\;dT+n\;C_V\;dT\]
+      \[C_p=R+C_V\]
+      <div class="row border-danger ">
+        <center><div class="col-md-6 pt-1 pb-1 border border-danger h1">
+          \[C_p-C_V=R\]
+        </div></center>
+      </div>
+      \[C_p>C_V\] <br>
+
+      <p><b>Demostrar. La ecuación   de Poisson (Ec. Adiabática.) </b></p>
+      \[pV^\gamma=cte \quad(Ec. Poisson)\]
+      Si: $\gamma = \frac{C_p}{C_V}$
+      \[dQ=dU+dW\]
+      \[dQ=0\quad(Adiabático)\]
+      \[dU+dW=0\;...\;...(1)\]
+      Si: $dU=n\,C_V\,dT\quad C_V=\frac{3}{2}\,R $
+     \[dU=\frac{3}{2}\,n\,R\,dT\;...\;...(2)\]
+     Ec. de Estado: $\qquad p\;V=n\;R\;T\;\;\;//d(\;)$
+     \[p\,dV+V\,dp=n\;R\;dT\;...\;...(3)\]
+     (3) en (2):
+     \[dU=\frac{3}{2}(p\;dV+V\;dp)\;...\;...(4)\]
+     \[dW=p\,dV\;...\;...(5)\]
+     (4), (5) en (1):
+     \[\frac{3}{2}\,p\;dV+\frac{3}{2}\,V\,dp+p\,dV=0\]
+     \[\frac{5}{2}\,p\;dV+\frac{3}{2}\,V\,dp=0\]
+     \[\frac{3}{2}\,V\,dp=-\frac{5}{2}\,p\;dV\quad //\frac{1}{pV} \]
+     \[\frac{3}{2}\,\frac{dP}{p}=-\frac{5}{2}\,\frac{dV}{V}\quad//\int \]
+     \[3\,ln\left(\frac{p_f}{p_0}\right)=-5\,ln\left({\frac{V_f}{V_0}}\right)\]
+     \[3\,ln\left(\frac{p_f}{p_0}\right)=5\,ln\left({\frac{V_0}{V_f}}\right)\]
+     \[ln\left(\frac{p_f}{p_0}\right)=ln\left({\frac{V_0}{V_f}}\right)^{\frac{5}{3}}\]
+     \[\frac{p_f}{p_0}={\left( \frac{V_0}{V_f}\right)}^\gamma\ \qquad; \gamma=\frac{5}{3}\]
+     <div class="row border-danger ">
+      <center><div class="col-md-6 pt-1 pb-1 border border-danger h1">
+        \[p_f\,V_f^\gamma=p_0\,V_0^\gamma\]
+      </div></center>
+    </div>
+     
+
+     <p>Si reemplazamos en la ec. de estado pV=nRT obtenemos la ecuación de adiabaticas
+       f (T, V) y f (T,p)</p>
+       <div class="row border-danger ">
+        <center><div class="col-md-6 pt-1 pb-1 border border-danger h1">
+          \[\frac{T_0}{T_f}={\left( \frac{V_f}{V_0}\right)}^{\gamma-1}\]
+        </div></center>
+      </div>
+      <div class="row border-danger ">
+        <center><div class="col-md-6 pt-1 pb-1 border border-danger h1">
+          \[\frac{T_0}{T_f}={\left( \frac{p_0}{p_1}\right)}^{\frac{\gamma-1}{\gamma}}\]   
+        </div></center>
+      </div><br><br>
+      
+      <p><b>6.5.2	Motor térmico.</b></p>
+      <p>Un motor térmico es aquella máquina a la cual le proporcionamos energía térmica y produce trabajo: </p>
+      <br>
+      <center><img src="img/motorTer.png" width="40%" alt=""></center>
+      <p><u>Rendimiento</u></b></p>
+      \[\eta=\frac{\Delta W}{\Delta Q}\]
+      \[\eta \%=\frac{\Delta W}{\Delta Q}*100\%\]
+
+      <p>$T_1$: Fuente de temperatura caliente</p> 
+      <p>$T_2$: Fuente de temperatura fría</p>
+      \[T_1 > T_2\]
+      Si: T=Cte <BR>
+      $\Delta U=0$ <br>
+      <center><img src="img/motorTer1.png" width="30%" alt=""></center><br>
+      <div class="row border-danger ">
+        <center><div class="col-md-6 pt-1 pb-1 border border-danger h1 ">
+          \[\Delta W=Q_1-Q_2\]
+        </div></center>
+      </div>
+      
+      <p>Si:</p>
+      $\Delta W>0\quad$ (motor térmico)
+      \[\eta=\frac{\Delta W}{Q_1}=\frac{trabajo}{calor\;suministrado} < 1\]
+      <div class="row border-danger">
+        <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
+          \[\eta=\frac{Q_1-Q_2}{Q_1} \;\;\;\;\;\;\; \eta=1-\frac{Q_2}{Q_1}\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-3 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 6.12</b></center>
+        </div>
+        </div>
+      
+      <p>En los motores térmicos podemos tener: </p>
+      <ul><ul><ul>
+        <li>Instalación en serie</li>
+        <li>Instalación en paralelo</li>
+      </ul></ul></ul>
+      <p><b>Conexión en serie </b>(con diferentes rendimientos)</p><br>
+      <center><img src="img/MotorSer.png" width="40%" alt=""></center><br>
+      <p><b>Conexión en paralelo </b></p><br>
+      <center><img src="img/MotorPar.png" width="70%" alt=""></center><br><br>
+      <p><b>6.1.3	Refrigerador.- </b>Al contrario del motor.</p>
+      <p>$T_1$: Fuente de temperatura caliente (medio ambiente)</p> 
+      <p>$T_2$: Fuente de temperatura fría (refrigerador)</p>
+      \[T_1 > T_2\]
+      <center><img src="img/refri.png" width="30%" alt=""></center><br><br>
+      <p>Se realiza el trabajo sobre el sistema</p>
+      \[\Delta W=Q_1-Q_2\]
+      <p>Sin rendimiento $\eta$</p>
+      <figure>
+        <center><img src="img/fig6-6a.png" width="30%" alt=""><img src="img/fig6-6b.jpg" width="30%" alt=""></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 6-6</b>Refrigerador</i>
+        </figcaption>      
+      </figure><br>
+      <p><b>6.5.4	Motor térmico</b></p>
+      <figure>
+        <center><img src="img/motorTer1.png" width="30%" alt=""></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 6-7</b>Motor Térmico</i>
+        </figcaption>      
+      </figure><br>
+      <figure>
+        <center><img src="img/fig6-8.png" width="40%" alt=""></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 6-8</b>Motor de Combustión</i>
+        </figcaption>      
+      </figure><br>
+      <center><img src="img/motor-combustion.gif" alt=""></center><br><br>
+      <figure>
+        <center><img src="img/fig6-9.jpg" width="90%" alt=""></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 6-9 </b>Ciclo de combustión</i>
+        </figcaption>      
+      </figure><br>
+      <center><img src="img/cicloComb.gif" alt="" width="20%" ></center><br><br>
+      
+      
+      <p>Aplicación</p>
+      <center><img src="img/motorapp.jpg" width="30%" alt=""><img src="img/analisis.PNG" width="30%" alt=""></center>
+      <p>Aplicación</p>
+      <center><img src="img/motorapp1.gif" width="60%" alt=""></center><br><br><br><br>
+
+
+
+      <br><br>
+
+
+       <!-- 7 TEORIA CINETRICA -->
+      <p><b><h1 style="color: blue;">7.	TEORÍA CINÉTICA DE LOS GASES Y SEGUNDA LEY DE LA TERMODINÁMICA (ENTROPÍA)</h1></b></p>
+      <P><B>7.1	Teoría cinética de los gases ideales</B></P>
+      <p>Se ocupa de estudiar el comportamiento de los gases desde un punto de vista microscópico, por lo tanto, esta teoría tiene postulados para un gas ideal (un modelo).</p>
+      <ul><ul>
+        <li>1° Todos los gases están compuestos por pequeñas partículas esféricas e idénticas denominadas moléculas, cada una con masa m.</li>
+        <li>2° Las distancias que existen entre las moléculas son grandes comparados con los radios de las moléculas, por lo tanto, el número de choques entre moléculas es pequeño.</li>
+        <li>3° Todas las moléculas se mueven con distintas velocidades (movimiento Browniano)</li>
+        <li>4° El movimiento molecular cumple con las leyes de la mecánica de Newton.</li>
+        <li>5° Los choques entre moléculas y entre las paredes del recipiente son perfectamente elásticos.</li>
+        <li>6° El número de moléculas que contiene un gas es grande, por lo tanto, la densidad del gas molecular se considera constante.</li>
+      </ul></ul>
+      <figure>
+        <center><img src="img/7777.jfif" width="30%" alt=""></center><br>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 7-1 </b>Teoría cinética de los gases</i>
+        </figcaption>      
+      </figure><br>
+      <p><b>7.1.1 Interpretación de la presión y la temperatura según la teoría cinética</b></p>
+      <p><b>7.1.1.1 Presión desde un punto de vista microscópico.-</b></p>
+      <p>Para interpretar la presión y la temperatura de un gas desde el punto de vista microscópico, vamos a suponer que desde un volumen de control (paralelepípedo) tenemos encerrado un gas.</p>
+      <figure>
+        <center><img src="img/fig7-2.png" width="40%" alt=""></center><br>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 7-2 </b>Punto de vista microscópico</i>
+        </figcaption>      
+      </figure><br>
+      <p>La densidad molecular:</p>
+      \[\eta=\frac{N}{V}\left[\frac{mol&eacute;culas}{m^3}\right]\]
+      <p>El cambio en la cantidad de movimiento en el choque elástico.</p>
+      <figure>
+        <center><img src="img/fig7-3.png" width="40%" alt=""></center><br>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 7-3 </b>Cantidad de movimiento en el choque elástico</i>
+        </figcaption>      
+      </figure><br>
+      <p>El cambio en la cantidad de movimiento de una molécula.</p>
+      \[\Delta P=m\,v-(-m\,v)\]
+      <div class="row border-danger">
+      <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
+        \[\Delta P=2\,m\,v\]
+      </div>
+      <!-- NOMBRE FORMULA -->
+      <div class="col-md-3 pt-3 pb-3 border border-danger h2">
+          <center><b> <br> Ecuación 7.1</b></center>
+      </div>
+      </div><br>
+      <p>Si suponemos que el gas tiene $\eta$ (mol&eacute;culas/$𝑚^3$), entonces el número de moléculas contenidas en el paralelepípedo será:</p>
+      \[N=\eta\left[\frac{mol&eacute;culas}{m^3}\right] × V\left[m^3\right] \quad ;\quad V=A×L\]
+      \[N=\eta \, A \, v \, \Delta t\]
+      <p>El cambio en la cantidad de movimiento total debido a las N moléculas será:</p>
+      \[\Delta P_T=N\, \Delta P\]
+      \[\Delta P_T=\left(\eta \, A \, v \, \Delta t\right)\left(2\,m\,v\right)\]
+      <p>La fuerza que se ejerce sobre la pared, sobre el área (cambio en la cantidad de movimiento, sobre el cambio de tiempo).</p>
+      <center><img src="img/fig7-3a.png" width="40%" alt=""></center><br>
+      
+      \[F=\frac{\Delta P_T}{\Delta t}\]
+      \[F=2\,\eta\,m\,v^2\,A\]
+      <p>La presión:</p>
+      \[ p=\frac{F}{A}\]
+      <div class="row border-danger">
+        <center><div class="col-md-6 pt-3 pb-3 border border-danger h1 escala">
+          \[ p=2\,\eta\,m\,v^2\]
+        </div></center>    
+     </div><br>
+      <p><b><u>Nota.</u>-</b></p>
+    
+      <div class="row border-danger">
+        <center><div class="col-md-4 pt-3 pb-3 border border-danger h1 escala">
+          \[ p \propto v^2\]
+        </div></center>    
+     </div>
+     \[ p \propto \eta\]
+     \[ p \propto m\]
+     <p><b>Correcciones a la fórmula:</b></p>
+     \[ p=2\,\eta\,m\,v^2\]
+     <p><b>$1^o$ Dividir la ecuación entre 2:</b> El 50 % van y 50% retornan.</p>
+     <center><img src="img/fig7-3b.png" width="40%" alt=""></center><br>
+     \[ p=2\,\eta\frac{1}{2}\,m\,v^2\]
+     <p><b>$2^o$ Dividir entre 3:</b></p>
+     \[v^2=v_x^2+v_y^2+v_z^2 \quad ; \quad v_x=v_y=v_z\]
+     \[v_x=\frac{1}{3} v^2\]
+   
+     \[ p=\frac{2}{3}\,\eta\frac{m\,v^2}{2}\]
+     <p>* Consideramos el valor cuadr&aacute;tico promedio:</p>
+     \[ p=\frac{2}{3}\,\eta\,m\frac{\overline{v^2}}{2}\]
+     <p>Luego la ecuación que representa la presión desde un punto de vista microscópico.</p>
+     <div class="row border-danger">
+      <center><div class="col-md-6 pt-3 pb-3 border border-danger h1 escala">
+        \[ p=\frac{2}{3}\,\eta\frac{m\,\overline{v^2}}{2}\]
+      </div></center>
+    </div><br>
+    <p><b>7.1.1.2 Temperatura desde un punto de vista microscópico.-</b></p>
+    <p>La densidad molecular:</p>
+      \[\eta=\frac{N}{V}\left[\frac{mol&eacute;culas}{m^3}\right]\]
+      <p>Reemplazando, en la presi&oacute;n:</p>
+      \[ p=\frac{2}{3}\,\frac{N}{V}\frac{m\,\overline{v^2}}{2}\]
+      \[ p\,V=\frac{2}{3}\,N\frac{m\,\overline{v^2}}{2} \propto T\]
+      <p>De la ecuación de estado:</p>
+      \[pV=nRT\]
+      \[ \frac{2}{3}\,N\frac{m\,\overline{v^2}}{2}=nRT\]
+      \[ \frac{1}{2}m\,\overline{v^2}=\frac{3}{2} \frac{n}{N}RT \]
+      \[ \frac{1}{2}m\,\overline{v^2}=\frac{3}{2} \left(\frac{R}{N_A}\right)T \]
+      <ul><li>La temperatura es debida a la energía cinética traslacional.</li></ul>
+      \[ \frac{1}{2}m\,\overline{v^2}=\frac{3}{2}kT \]
+      <p>Donde k es constante de Boltzmann:</p>
+      \[k=\frac{R}{N_A}=\frac{8,314\;J/mol\,K}{6,023×10^{23}\;mol&eacute;culas/mol}\; \]
+      \[k= 1,3806503×10^{-23}\;J/mol&eacute;cula\,K \]
+      <p>Usamos $N=N_A\;n\;$ y $\;R=N_A\;k$, en la ecuación de estado:</p>
+      <div class="row border-danger">
+      <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
+        \[p\,V=N\,k\,T\]
+      </div>
+      <!-- NOMBRE FORMULA -->
+      <div class="col-md-3 pt-3 pb-3 border border-danger h2">
+          <center><b> <br> Ecuación 7.2</b></center>
+      </div>
+      </div><br>
+      <p>Por lo tanto, hay dos formas de escribir la ecuación de estado:</p>
+      <p>Macro:</p>
+      \[p\,V=n\,R\,T\]
+      <p>Micro:</p>
+      \[p\,V=N\,k\,T\]
+
+      <div class="row border-danger">
+        <center><div class="col-md-6 pt-3 pb-3 border border-danger h1 escala">
+          \[ n\,R=N\,k\]
+        </div></center>
+      </div><br>
+
+
+
+      <br><br><br>  
+
+      <p><b>7.2	Segunda ley de la termodinámica</b></p>
+      <p>Para un <b>motor térmico</b> la $2^°$ley de la termodinámica dice: Que es imposible extraer todo el calor de la fuente caliente y transformarlo en trabajo.</p>
+      <p>La $2^°$ley de la termodinámica para <b>refrigeradores</b> dice: Que no se puede extraer calor de la fuente fría y expulsar a la fuente caliente si es que no se realiza trabajo (motor).</p>
+      <center><p>NO SE PUEDE HACER EN LA REALIDAD</p></center>
+      <figure>
+        <center><img src="img/fig7-4.png" width="60%" alt=""></center><br>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 7-4 </b>Motor Térmico y Refrigerador</i>
+        </figcaption>      
+      </figure><br>
+      <p><u>Conclusión.</u>- La $2^°$ ley de la termodinámica, se refiere al principio de la conservación de la energía, pero limita que procesos pueden realizarse en la práctica.</p>
+      <br><br>
+      <p><b>7.2	Entropía</b></p>
+      <p>La entropía de un sistema es la capacidad de desarrollar trabajo que este tiene o la entropía es una variable física que nos 
+        mide el grado de desorden dentro de un sistema y la entropía en un proceso reversible es nula mientras que la entropía en un 
+        proceso real es positivo $\Delta S_{real} > 0.$</p>
+        <p>La ecuación que define el cambio de entropía de un sistema relaciona el calor con la temperatura. Matemáticamente el cambio
+           de entropía se define como:</p>
+        \[\Delta S=\frac{\Delta Q}{T}\]
+        \[ dS=\frac{dQ}{T}\]
+        \[\Delta S=\int\frac{d Q}{T}\]
+
+        <p><b><u>Ejemplo.</u>- </b>1 Kg de hielo a $0\, C^o$ se funde para convertirse en agua a $0\, C^o$. Calc&uacute;lese su variación de entrop&iacute;a.</p>
+        Soluci&oacute;n.-
+          \[\Delta S=\int\frac{d Q}{T}=\frac{1}{T}\int dQ=\frac{Q}{T}\]
+          \[\Delta S=\frac{80\,000}{273}=293 \,cal\,K\]
+        <p><b><u>Ejemplo.</u>- </b>1 Kg de agua que se encuentra a $0\, C^o$ se calienta hasta $100\, C^o$. Calc&uacute;lese su variación de entrop&iacute;a</p>
+        Soluci&oacute;n.-
+          \[\Delta S=\int\frac{d Q}{T}\]
+          \[dQ=m\,c\,dT\]
+          \[\Delta S=\int\frac{d Q}{T}=\int_{273}^{373} m\,c\,\frac{dT}{T}\]
+          \[\Delta S= m\,c\,ln \left(\frac{373}{273}\right)=312 \,cal\,K\]
+        <p><b><u>Ejemplo.</u>- </b>Al efectuar la expansi&oacute;n adiab&aacute;tica y reversible de un gas. Calc&uacute;lese su variación de entrop&iacute;a</p>
+         Soluci&oacute;n.-
+         \[Q=0\]
+         \[\Delta S=0\]
+        Resulta que en todo proceso adiab&aacute;tico reversible no hay variación de entrop&iacute;a, por lo q puede denominarse <k>isoentr&oacute;pico.</k>
+        <br><hr><br>
+        <p><b>La $2^o$ ley de la termodinámica</b></p>
+        Procesos Reales: $\qquad\Delta S>0$ <br>
+        Procesos Reversibles:$\qquad\Delta S=0$ <br>
+        Si, $\Delta Q= Cte \qquad\qquad\Delta S=0 $
+        <div class="row border-danger">
+        <center><div class="col-md-7 pt-3 pb-3 border border-danger h1 escala">
+          \[\Delta S_{real}>0\]
+          \[\Delta S_{ideal}=0\]
+        </div></center>
+        </div><br>
+        
+        
+        <p><b><u>Ejemplo.</u>- </b></p>
+        <figure>
+          <center><img src="img/fig7-5.png" width="70%" alt=""></center><br>
+          <figcaption class="text text-center text-primary h4"><i><b>Figura 7-5 </b>Equilibrio térmico</i>
+          </figcaption>      
+        </figure><br>
+        <p>El cambio de entrop&iacute;a, de $T_1 \;y\; T_{eq}$ es:</p>
+        \[\Delta S_1=\int\frac{d Q}{T}=\int_{T_1}^{T_eq} m\,c\,\frac{dT}{T}= m\,c\,ln \left(\frac{T_{eq}}{T_1}\right)\]
+        <p>De manera similar entre $T_2 \;y\; T_{eq}$ :</p>
+        \[\Delta S_2=\int_{T_2}^{T_eq} m\,c\,\frac{dT}{T}= m\,c\,ln \left(\frac{T_{eq}}{T_2}\right)\]
+        <p>El cambio total de la entrop&iacute;a es:</p>
+        \[\Delta S_T=\Delta S_1+\Delta S_2\]
+        \[\Delta S_T=m\,c\,ln \left(\frac{T_{eq}}{T_1}\right)+m\,c\,ln \left(\frac{T_{eq}}{T_2}\right)\]
+        <div class="row border-danger">
+        <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
+          \[\Delta S_T=m\,c\,ln \left(\frac{T_{eq}^2}{T_1\,T_2}\right)\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-3 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 7.3</b></center>
+        </div>
+        </div><br>
+        <p>Cambio de entrop&iacute;a</p>
+        <div class="row border-danger">
+        <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
+          \[\Delta S_T=\left[ln T_{eq}^2-ln \left(T_1\;T_2\right)\right]\,m\,c\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-3 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 7.4</b></center>
+        </div>
+        </div><br>
+        <p><b>7.4	Ciclo</b></p>
+        <p>Un ciclo es aquel que está compuesto por varios procesos y permite llevar a un sistema desde un estado inicial
+           a un estado final, para luego retornar al estado inicial (Camino cerrado).</p><br>
+        <figure>
+        <center><img src="img/fig7-6.png" width="70%" alt=""></center><br>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 7-6 </b>Ciclo Termodinámico</i>
+        </figcaption>      
+        </figure><br>
+        B a C: Aumentar la presión a volumen constante. <br>
+        C a D: Expansión a presión constante el volumen y la temperatura cambian. <br>
+        D a A: Cae la presión a volumen constante, disminuye la temperatura. <br>
+        A a B: Compresión a presión constante, cambia la temperatura. <br><br>
+        <p><k>"Si son procesos reversibles → ciclo reversible; si son procesos irreversibles → ciclo irreversible."</k></p><br>
+        Ciclo   OTTO…… Gasolina <br>
+        Ciclo Diésel……. Diésel <br>
+        Ciclo Bryton …… Gas <br>
+        Ciclo Rankine….  Vaporinas  <br>   <br>
+
+        <p><b>7.5	Ciclo de Carnot</b></p>
+        <p>Está compuesto por dos curvas adiabáticas y dos curvas isotérmicas una a la fuente de temperatura caliente 
+          $T_1$ y otra a una fuente de temperatura fría $T_2$.</p>
+        <figure>
+        <center><img src="img/fig7-7.png" width="80%" alt=""></center><br>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 7-7 </b>Ciclo de Carnot</i>
+        </figcaption>      
+        </figure><br>
+
+        <center><img src="img/cicloCarnot.png" width="80%" alt=""></center> <br><br>
+
+        <table class="table table-bordered border-dark table-striped h1 text-center"><br>
+          <tr><td>  Pto </td><td>p</td><td>V</td><td>T</td></tr>
+          <tr><td>  1 </td><td>$p_1$</td><td>$V_1$</td><td>$T_1$</td></tr>
+          <tr><td>  2 </td><td>$p_2$</td><td>$V_2$</td><td>$T_1$</td></tr>
+          <tr><td>  3 </td><td>$p_3$</td><td>$V_3$</td><td>$T_2$</td></tr>
+          <tr><td>  4 </td><td>$p_4$</td><td>$V_4$</td><td>$T_2$</td></tr>
+        </table>
+
+        <table class="table table-bordered border-dark table-striped h4">
+                            
+          <tr><td width="10%" Align="center"><b><br><br>Proceso</b></td>
+              <td width="25%" Align="center"><b><br><br>Curva</b></td>
+              <td width="20%" Align="center"><b>\[\Delta W=\int p dV\]</b></td>
+              <td width="15%" Align="center"><b>\[\Delta U=\int n C_V dT\]</b></td>
+              <td width="15%" Align="center"><b><br>\[\Delta Q=\Delta W+\Delta U\]</b></td>
+              <td width="15%" Align="center"><b>\[\Delta S=\int\frac{d Q}{T}\]</b></td>
+          </tr>
+          <tr>
+            <td><center><br>1 → 2 <br><br>Expansión <br>Isotérmica </center></td>
+            <td><img src="img/carnot12.png" width="100%" class="zoomder"></td>
+            <td>\[\Delta W=n R T_1 ln\left(\frac{V_2}{V_1}\right)\]</td>
+            <td>\[\Delta U=0\]</td>
+            <td>\[\Delta Q=\Delta W\]\[Q_1\]</td>
+            <td>\[\Delta S=n\,R\,ln\left(\frac{V_2}{V_1}\right)\]\[\Delta S=Q_1\,/\,T_1\]</td>
+          </tr>
+          <tr>
+            <td><center><br>2 → 3 <br><br>Expansión <br>Adiabática </center></td>
+            <td><img src="img/carnot23.png" width="100%" class="zoomder"></td>
+            <td>\[\Delta W=\frac{p_3V_3-p_2V_2}{1-\gamma}\]</td>
+            <td>\[\Delta U=n C_V \left(T_2-T_1\right)\]</td>
+            <td>\[\Delta Q=0\]</td>
+            <td>\[\Delta S=0\]</td>
+          </tr>
+          <tr>
+            <td><center><br>3 → 4 <br><br>Compresión <br>Isotérmica </center></td>
+            <td><img src="img/carnot34.png" width="100%" class="zoomder"></td>
+            <td>\[\Delta W=n R T_2 ln\left(\frac{V_4}{V_3}\right)\]</td>
+            <td>\[\Delta U=0\]</td>
+            <td>\[\Delta Q=\Delta W\]\[Q_2\]</td>
+            <td>\[\Delta S=n\,R\,ln\left(\frac{V_4}{V_3}\right)\]\[\Delta S=Q_2\,/\,T_2\]</td>
+          </tr>
+          <tr>
+            <td><center><br>4 → 1 <br><br>Compresión <br>Adiabática </center></td>
+            <td><img src="img/carnot41.png" width="100%" class="zoomder"></td>
+            <td>\[\Delta W=\frac{p_4V_4-p_1V_1}{1-\gamma}\]</td>
+            <td>\[\Delta U=n C_V \left(T_1-T_2\right)\]</td>
+            <td>\[\Delta Q=0\]</td>
+            <td>\[\Delta S=0\]</td>
+          </tr>
+          <tr>
+            <td><center>\sum</center></td>
+            <td><center>\sum</center></td>
+            <td>\[\Delta W_T\]</td>
+            <td>\[\Delta U_T=0\]</td>
+            <td>\[\Delta Q_T\]</td>
+            <td>\[\Delta S_T=0\]</td>
+          </tr>
+        </table><br>
+        <p>El rendimiento:</p>
+        <div class="row border-danger">
+          <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
+            \[\eta=\frac{\Delta W}{Q_1}=\frac{Q_1-Q_2}{Q_1}=1-\frac{Q_2}{Q_1}\]
+          </div>
+          <!-- NOMBRE FORMULA -->
+          <div class="col-md-3 pt-3 pb-3 border border-danger h4">
+              <center><b><br> Ecuación 7.5</b></center>
+          </div>
+          </div><br>
+
+      
+      <p>En función de la temperatura: $\Delta S_{ciclo}=0$ :</p>
+      \[\frac{Q_1}{T_1}-\frac{Q_2}{T_2}=0 \quad → \quad \frac{Q_2}{Q_1}=\frac{T_2}{T_1}\]
+      <div class="row border-danger">
+        <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
+          \[\eta=1-\frac{T_2}{T_1}\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-3 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 7.6</b></center>
+        </div>
+        </div><br>
+      <p><b><u>Ejemplo.</u>- Un mol de un gas monoatómico </p>
+
+
+
+    </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
