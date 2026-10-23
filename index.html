@@ -1,0 +1,663 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>FISICA-II</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <style>
+    .main{
+        margin: 0px;
+        padding: 10px 50px ;
+        font-family: Arial;
+        font-size: 35px;
+        background: #f8e00b;
+        background: hsl(60, 100%, 80%);
+        /* background: #ffffffff; */
+        }
+    .escala:hover{
+        transition: 1.5s;
+        scale: 1.4;
+    }
+    .escala1:hover{
+        transition: 1.5s;
+        scale: 1;
+    }
+    .disp{
+        font-size: 1em;
+    padding: 1rem;
+    display: inline-block;
+    border: solid 3px red;
+    
+    }
+    .zoomder {
+      width: 100%;
+      transition: transform 0.3s;
+      transform-origin: left center;
+    }
+    .zoomder:hover{
+      transform: scale(1.8);
+    }
+    /*ul.reloj-pc{
+      font-family: 'Consolas', monospace;
+      font-size: 1.2rem;
+      background: #111827;
+      color: #00ff88;
+    }
+    ul.reloj-pc li{
+      margin:10px 0;
+      font-size: 1.1rem;
+    }
+    .hora-grande {
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }*/
+
+    
+
+</style>
+<style>
+
+  #li-reloj {
+      background-color: #111827;
+      color: #00ff88;
+      padding: 1px;
+      border-radius: 8px;
+      font-size: 3.5rem;
+      font-weight: bold;
+      font-family: 'Consolas', monospace;
+      text-align: center;
+
+    }
+</style>
+/* para animacion gif y png */
+<link  rel="stylesheet" href="styles.css">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Updated: Apr 20 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+                      <!-- 
+                      <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>-->
+                      <!-- desxativar internet -->
+                      <!----><script id="MathJax-script" async src="./js/texmmlchtml.js"></script> 
+                      <script>
+                          MathJax = {
+                            tex: {
+                              inlineMath: [['$', '$'], ['\\(', '\\)']]
+                            },
+                            svg: {
+                              fontCache: 'global'
+                            }
+                          };
+                      </script>
+                      <script type="text/javascript" id="MathJax-script" async
+                          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+                      </script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center" style="background-color: rgb(13, 80, 43);">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block text-white">  FISICA II</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn text-white"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+    
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+         <li class="">
+          <a class="nav-link nav-icon" href="index.html">
+            <img src="assets/img/logo.png" alt="">
+            <span class="badge bg-primary badge-number">1</span>
+          </a><!-- End Notification Icon -->
+        </li><!-- End Notification Nav -->
+        
+        <li class="">
+          <a class="nav-link nav-icon" href="index.html">
+            <img src="assets/img/logo.png" alt="">
+            <span class="badge bg-primary badge-number">2</span>
+          </a><!-- End Notification Icon -->
+        </li><!-- End Notification Nav -->
+        
+        <li class="">
+          <a class="nav-link nav-icon" href="index.html">
+            <img src="assets/img/logo.png" alt="">
+            <span class="badge bg-primary badge-number">3</span>
+          </a><!-- End Notification Icon -->
+        </li><!-- End Notification Nav -->
+
+        
+        <li id="li-reloj">
+          00:00:00
+        </li>
+
+
+      </ul>
+
+      <script>
+        function actualizarHora(){
+          const ahora=new Date();
+          const hora= ahora.toLocaleTimeString('es-BO',{ hour12:false});
+          document.getElementById('li-reloj').textContent=hora;
+        }
+        
+        actualizarHora();
+        setInterval(actualizarHora, 1000);
+      </script>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar" style="background-color: rgb(0, 80, 0);">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed text-white" style="background-color: rgb(0, 90, 0);" href="index.html">
+          <i class="bi bi-person"></i>
+          <span >PERFIL</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item" >
+        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="description.html">
+          <i class="bi bi-grid text-white"></i>
+          <span>DESCRIPCIÓN</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item" >
+        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="contents.html">
+          <i class="bi bi-menu-button-wide text-white"></i>
+          <span>CONTENIDO</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item" >
+        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="bibliografia.html">
+          <i class="bi bi-menu-button-wide text-white"></i>
+          <span>BIBLIOGRAFÍA</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      
+      <li class="nav-heading">MÓDULOS</li>
+      
+      <li class="nav-item">
+        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="mod1.html">
+          <i class="bi bi-menu-button-wide"></i>
+          <span>MÓDULO I</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="mod2.html">
+          <i class="bi bi-menu-button-wide"></i>
+          <span>MÓDULO II</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="mod3.html">
+          <i class="bi bi-menu-button-wide"></i>
+          <span>MÓDULO III</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar <main id="main" class="main"> -->
+  <main id="main" class="main">
+    <p><b>ELECTRICIDAD</b></p>
+    <p>La electricidad se ocupa del estudio de cargas eléctricas y sus interacciones, se divide en:
+        <ul>
+            <li><b>Electrostática: </b>Que considera las cargas en reposo.</li>
+            <li><b>Electrodinámica: </b>Que toma en cuenta el movimiento de las cargas.</li>
+        </ul> 
+    </p>
+    <p class="iem" id="1.2.1"><b>Descripción microscópica de la materia.</b></p>
+    <p>Toda la materia según el modelo del átomo de Bohr ,está constituida por partículas 
+        elementales que tienen vida permanente y las más conocidas son los: protones, 
+        electrones y neutrones.
+    </p>
+    <figure>
+        <center><img class="escala" src="img/hidrogeno.jpg" width="30%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 8-1 </b> Descripción microscópica de la materia</i></figcaption>      
+    </figure><br>
+    <p>Los 𝑒− (Electrones): orbitan entorno al núcleo en radios del orden de <math><msup><mn>10</mn><mn>-6</mn></msup></math> metros.
+        Las partículas elementales tienen las siguientes propiedades.
+    </p>
+<table  class="table table-bordered border-dark table-striped h4" >       
+        <tr><td width="20%" Align="center"><b>PARTÍCULA</b></td>
+            <td width="35%" Align="center"><b>MASA (Kg)</b></td>
+            <td width="35%" Align="center"><b>CARGA (C)</b></td>
+            <td width="10%" Align="center"><b>SPIN</b></td>
+            <td width="10%" Align="center"><b>MOMENTO 
+                DIPOLAR - MAGNÉTICO</b></td> 
+        </tr>
+        <tr>
+            <td width="20%">
+                <p>Electrón</p>
+            </td>       
+            <td width="35%" class="text-center escala">
+            <p><math><mn>9,11x</mn><msup><mn>10</mn><mn>-31</mn></msup></math></p>
+            </td>
+            <td width="35%" class="text-center escala">
+                <p><math><mo>-</mo><mi>e</mi><mo>=</mo><mo>-</mo><mn>1,61x</mn><msup><mn>10</mn><mn>-19</mn></msup></math></p>
+            </td>
+            <td width="10%">
+                <math></math>
+            </td>
+            <td width="10%">
+                <math></math>
+            </td>            
+        </tr>
+        <tr>
+            <td width="20%">
+                <p>         Protón                  </p>
+            </td>       
+            <td width="35%" class="text-center escala">
+            <p><math><mn>1,67x</mn><msup><mn>10</mn><mn>-27</mn></msup></math></p>
+            </td>
+            <td width="35%" class="text-center escala">
+                <p><math><mo>+</mo><mi>e</mi><mo>=</mo><mn>1,61x</mn><msup><mn>10</mn><mn>-19</mn></msup></math></p>
+            </td>
+            <td width="10%">
+                <math></math>
+            </td>
+            <td width="10%">
+                <math></math>
+            </td>            
+        </tr>
+        <tr>
+            <td width="20%">
+                <p>       Neutrón              </p>
+            </td>       
+            <td width="35%" class="text-center escala">
+                <p><math><mn>1,67x</mn><msup><mn>10</mn><mn>-27</mn></msup></math></p>
+            </td>
+            <td width="35%" class="text-center escala">
+                <p><math><mo>------------</mo></math></p>
+            </td>
+            <td width="10%">
+                <math></math>
+            </td>
+            <td width="10%">
+                <math></math>
+            </td>            
+        </tr>                       
+</table> <br>
+
+    <p> <ul>
+            <li>Suponer que la carga eléctrica está siempre cuantizada. Y es el principio de
+                cuantización de la carga. </li>
+                <div class="container-fluid">
+                    <center>
+                    <p class="border border-danger h2 pt-3 pb-3 disp escala">
+                        <math><mi>q</mi><mo>=</mo><mi>n</mi><mi>e</mi></math>
+                      </p>
+                    </center>
+                </div>
+                  <center><p><math><mi>n</mi><mo>=</mo><mn>1,2,3, ...</mn></math></center></p>
+            <li>Suponer el principio de conservación de carga eléctrica</li><br>
+            <center><img class="escala"  src="img/conservacionCarga.png" width="50%"></center>
+        </ul>   
+    </p>
+    <p>Los electrones no solo giran en torno al núcleo sino giran en sobre un eje que pasa
+        por uno de sus diámetros.
+    </p><br>
+    <figure>
+        <center><img class="escala" src="img/traslacionRotacion.jpg" width="80%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 8-2 </b>Traslación y Rotación del electrón</i></figcaption>      
+    </figure><br>
+    <img class="escala" src="img/PruebaAtomo-enhanced.gif" width="50%" alt="">
+    <p>El giro de los electrones, produce dipolo magnético
+    </p>
+    <figure>
+        <center><img class="escala" src="img/dipoloMagnetico.jpg" width="50%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 8-3 </b>Dipolo Magnético</i></figcaption>      
+    </figure><br>
+    <p><b>Intensidad de Corriente (i).-</b>Se define como la cantidad de carga eléctrica que atraviesa la sección transversal
+    de un material conductor en la unidad de tiempo</p><br>
+    <figure>
+        <center><img class="escala" src="img/intensidadCorriente.png" width="60%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 8-4 </b>Corriente eléctrica</i></figcaption>      
+    </figure><br>
+    <p class="text-center h1">
+        <math><mfrac><mi>i</mi></mfrac><mo>=</mo><mfrac><mi>q</mi><mi>t</mi></mfrac><mi>&nbsp;</mi><mo>[</mo><mfrac><mi>c</mi><mi>s</mi></mfrac><mo>]</mo></math>
+    </p><br>
+    <p class="text-center h1">
+        <math><mfrac><mi>i</mi></mfrac><mo>=</mo><mfrac><mi>q</mi><mi>t</mi></mfrac><mi>&nbsp;</mi><mo>[</mo><mfrac><mi>a</mi></mfrac><mo>]</mo></math>
+    </p><br>
+    <p>en términos diferenciales</p>
+    <div class="row border-danger ">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+            \[i=\frac{dq}{dt}\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 8.1a</b></center>
+      </div>
+    </div><br>
+    <p>Integrando:</p>
+    <div class="row border-danger ">
+        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+            \[q=\int i\, dt\]
+        </div>
+        <!-- NOMBRE FORMULA -->
+        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+            <center><b>Ecuación 8.1b</b></center>
+      </div>
+    </div><br>
+    
+    <p><b>Clasificación.</b><br>
+    <p>Los materiales desde un punto de vista eléctrico, se clasifican en: materiales aislantes y conductores
+        <ul>
+            <li><b>Aislantes: </b>
+            No dejan pasar la corriente eléctrica través de ellos, no se arrancafácilmente 𝑒− de sus átomos ej, porcelana, vidrio, arcilla. </li>
+            <li><b>Conductores: </b>
+                Presentan 𝑒− libres en las últimas órbitas de sus átomos.Dejan pasar la corriente eléctrica a través de ellos. Ej metales: Cu, Al; gases
+            Na, Hg. </li>
+            <li><b>Semiconductores: </b>
+            En determinadas condiciones dejan pasar la electricidad y en otras se oponen. Ala circulación de corriente</li>
+            <li><b>Superconductores: </b>
+            No presentan resistencia eléctrica y se manifiesta un fuerte campo magnético</li>
+        </ul>   
+    </p>
+    <p><b>8.2 Electrización de la materia.</b><br>
+    <p>La materia puede electrizarse de dos maneras.
+        <ul>
+            <li><b>Fricción: </b>Contacto físico entre dos materiales.
+                <figure>
+                    <center><img class="escala" src="img/friccion.jfif" width="40%"></center>
+                    <figcaption class="text text-center text-primary h4"><i><b>Figura 8-5 </b>Electrización por Fricción</i></figcaption>      
+                </figure></li>
+            <li><b>Por inducción: </b>Cuando no existe contacto físico.
+                <figure>
+                    <center><img class="escala" src="img/induccion.png" width="70%"></center>
+                    <figcaption class="text text-center text-primary h4"><i><b>Figura 8-6 </b>Electrización por inducción</i></figcaption>      
+                </figure><br>
+                <figure>
+                    <center><img class="escala" src="img/tipoElectrizacion.jpg" width="60%"></center>
+                    <figcaption class="text text-center text-primary h4"><i><b>Figura 8-7 </b>Tipos de Electrización</i></figcaption>      
+                </figure>
+            </li>
+          </u>
+    
+    <!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb -->
+    <!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb -->
+    <p><b>8.3 Ley de Coulomb</b></p>
+    <p><b>8.3.1 Ley de las cargas.- </b>Experimentalmente se comprueba que cargas del mismo signo sufren interacciones
+      de repulsión y que cargas del signo contrario se atraen y esto se conoce como la
+      ley de las cargas</p>
+      <center><img class="" src="img/leyCargas.png" width="50%"></center>
+    <p>La ecuación que permite el cálculo de la fuerza eléctrica se
+        conoce como la Ley de Coulomb que dice: <i>Si se tiene dos cargas eléctricas
+        separadas una distancia "d" entre ellas, entonces la fuerza que se ejerce a una  distancia
+        es central y está ubicada sobre la línea de acción que une las dos cargas, si las
+        cargas son positivas la fuerza será repulsiva.</i></p><br>
+        <figure>
+            <center><img class="" src="img/fig8-8.png" width="80%"></center>
+            <figcaption class="text text-center text-primary h4"><i><b>Figura 8-8 </b>Ley de Coulomb</i></figcaption>      
+        </figure><br>
+    <p>La fuerza: </p>
+    \[F\propto q_1\,q_2\]
+    \[F\propto \frac{1}{d^2}\]
+    \[F\propto f(\text{medio},\varepsilon_0)\]
+    Permitividad en el vac&iacute;o: $\varepsilon_0=8,85\times 10^{-12}\; [F/m]$
+    <p>As&iacute;, obtenemos, la fuerza entre las cargas:</p>
+    <div class="row border-danger ">
+      <center><div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+        \[F=k\frac{q_1\,q_2}{d^2}\]
+      </div></center>
+      <!-- NOMBRE FORMULA -->
+    </div><br>
+    <p>En el sistema SI, la constante k se expresa:</p>
+    \[k=\frac{1}{4\pi\varepsilon_0}=9\times10^9 \left[\frac{N\,m^2}{C^2}\right]\]
+    <p><b>8.3.2 Ley de Coulomb: Forma vectorial</b></p>
+    <center><img class="" src="img/coulomb8-3a.png" width="70%"></center><br>
+    <center><img class="" src="img/coulomb8-3b.png" width="70%"></center><br>
+    <p>As&iacute;, tenemos:</p>
+    <figure>
+      <center><img class="escala" src="img/fig8-9.png" width="70%"></center><br>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 8-9 </b>Ley de Coulomb Forma Vectorial</i></figcaption>      
+    </figure><br>
+    <p>La ecuacion matem&aacute;tica</p>
+        <div class="row border-danger ">
+            <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+              \[\vec F=k\frac{q_1\,q_2}{r^2}\,\hat u_r\]
+            </div>
+            <!-- NOMBRE FORMULA -->
+            <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+                <center><b>Ecuación 8.2</b></center>
+          </div>
+        </div>
+
+        <p>Donde: </p>
+        Constante de Coulomb: $k=\frac{1}{4\pi\varepsilon_0}=9\times10^9 \left[\frac{N\,m^2}{C^2}\right]$ <br>
+          Permitividad en el vac&iacute;o: $\varepsilon_0=8,85\times 10^{-12}\; [F/m]$ <br><br><br>
+
+    <p><i>*Cuando existen dos cargas puntuales existe una fuerza de atracción o de repulsión</i></p>
+    <figure><br>
+        <center><img class="" src="img/fig8-10.png" width="60%"></center>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 8-10 </b>Fuerzas de Repulsión y Atracción</i></figcaption>      
+    </figure><br>
+    <p>Cuando se tiene más de dos cargas eléctricas y se desea calcular la fuerza sobre
+        una de ellas, entonces aplicamos el principio de superposición</p><br>
+    
+        <figure>
+          <center><img class="" src="img/fig8-11.png" width="80%"></center><br>
+          <figcaption class="text text-center text-primary h4"><i><b>Figura 8-11 </b>Principio de Superposición</i></figcaption>      
+        </figure><br>
+        <p>Hallamos la fuerza entre cada par de cargas, sobre la carga en cuestión y luego
+          sumamos para obtener la fuerza resultante.</p>
+          \[\vec F=\sum\limits_{i=1}^{n} {\vec F}_i\]
+          \[\vec F=\vec F_1+\vec F_2+\vec F_3+\vec F_4+ .......+\vec F_k+.......+\vec F_n\]
+          \[\vec F=k\frac{q_1\,q_0}{r_1^2}\,\hat u_{r_1}+k\frac{q_2\,q_0}{r_2^2}\,\hat u_{r_2}+.........+k\frac{q_n\,q_0}{r_n^2}\,\hat u_{r_n}\]
+
+        <div class="row border-danger ">
+            <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+              \[\vec F=k\,q_0\sum\limits_{i=1}^{n} \frac{q_i}{r_i^2}\,\hat u_{r_i}\]
+            </div>
+            <!-- NOMBRE FORMULA -->
+            <div class="col-md-4 pt-3 pb-3 border border-danger h4">
+                <center><b>Ecuación 8.3</b></center>
+          </div>
+        </div><br>
+
+    <p><b>Ejemplo.-</b>Hallar la fuerza que se ejerce sobre la carga que se encuentra en el
+        origen de eje de coordenadas, segun la distribución de cargas mostrada. </p><br>
+        <center><img class="" src="img/ejem8-1.png" width="70%"></center><br>
+        <b>Soluci&oacute;n.-</b> 
+        <center><img class="" src="img/ejem8-2.png" width="70%"></center><br>
+    <p><b>Ejemplo.-</b>hallar la fuerza sobre una carga ubicada en el vértice: </p>
+        <center><img class="escala" src="img/ejemplos.png" width="50%"></center>
+
+    <br><br><hr><hr><br><br>
+     <!-- Campo Electrico--> <!-- Campo Electrico--> <!-- Campo Electrico-->  
+    <!-- Campo Electrico--> <!-- Campo Electrico--> <!-- Campo Electrico-->
+    <p><b>9 Campo Eléctrico y Potencial Electrostático</b></p>
+    <p><b>9.1 Campo Eléctrico</b></p>
+    <p>Es una situación física que se manifiesta alrededor de una carga eléctrica y cambia las ropiedades del medio.</p>
+    <figure>
+        <center><img class="escala" src="img/fig9-1a.png" width="50%"><img class="escala" src="img/fig9-1b.png" width="50%"></center> <br>
+        <figcaption class="text text-center text-primary h4"><i><b>Figura 9-1a </b>Campo Eléctrico</i></figcaption>      
+    </figure><br>
+    <p>Se define como la fuerza eléctrica que se ejerce sobre una carga unitaria (+), denominada carga de prueba.</p>
+    <figure>
+      <center><img class="" src="img/fig9-1.png" width="80%"></center> <br>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 9-1b </b>Campo Eléctrico</i></figcaption>      
+  </figure><br>
+  \[E=\frac{\text{Fuerza}}{\text{Carga de prueba}}\]
+  <div class="row border-danger ">
+    <center><div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
+      \[\vec E=\frac{\vec F}{\vert q_p^+\lvert}\;\left[\frac{N}{C}\right]\]
+    </div></center>
+    <!-- NOMBRE FORMULA -->
+  </div><br><br>
+  <figure>
+    <center><img class="" src="img/fig9-2.png" width="100%"></center> <br>
+    <figcaption class="text text-center text-primary h4"><i><b>Figura 9-2 </b>Dirección Campo Eléctrico</i></figcaption>      
+  </figure><br>
+    <p><b>9.1.1 Líneas de campo eléctrico</b></p>
+    Son líneas imaginarias que permiten visualizar el campo eléctrico y tienen las siguientes propiedades.
+    <ol>
+      <li>Salen de cargas positivas que son fuentes generadoras de líneas y terminan en cargas negativas que son sumideros.</li>
+      <li>El campo eléctrico es un vector tangente a una línea en cualquier punto.</li>
+      <li>El número de líneas que se dibuja por unidad de área es proporcional a la magnitud del campo eléctrico.</li>
+      <li>Las líneas de campo eléctrico no se cruzan.</li>
+    </ol><br>
+    <figure>
+      <center><img class="" src="img/lineasCampoa.png" width="80%"></center><br>
+      <center><img class="" src="img/lineasCampob.png" width="60%"></center><br>
+      <center><img class="" src="img/lineasCampoc.webp" width="100%"></center><br>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 9-3 </b>Líneas de Campo Eléctrico</i></figcaption>      
+    </figure><br><br>
+
+    <p><b>9.1.2 Densidad de carga</b></p>
+    <p>La carga eléctrica puede estar distribuida en longitudes, áreas y volúmenes, por lo tanto, podemos hablar de tres 
+      tipos de densidad que son:</p>
+
+      <table class="table table-bordered border-dark table-striped h4">
+                            
+        <tr><td width="20%" Align="center"><b>DENSIDAD</b></td>
+            <td width="15%" Align="center"><b>ESQUEMA</b></td>
+            <td width="20%" Align="center"><b>$\rho $ (DENSIDAD)</b></td>
+            <td width="15%" Align="center"><b>q</b></td>
+        </tr>
+        <tr>
+          <td>Lineal</td>
+          <td><br><br><img src="img/lineal.png" width="80%" class="zoomder"></td>
+          <td>\[\rho_L=\frac{q}{L}=\frac{dq}{dx}\left[\frac{C}{m}\right]\]</td>
+          <td>\[q=\int_L \rho_L\,dx\]</td>
+        </tr>
+        <tr>
+          <td>Superficial</td>
+          <td><img src="img/superficial.png" width="100%" class="zoomder"></td>
+          <td>\[\rho_A=\frac{q}{A}=\frac{dq}{dA}\left[\frac{C}{m^2}\right]\]</td>
+          <td>\[q=\iint_A \rho_A\,dA\]</td>
+        </tr>
+        <tr>
+          <td>Lineal</td>
+          <td><img src="img/volumetrico.png" width="100%" class="zoomder"></td>
+          <td>\[\rho=\frac{q}{L}=\frac{dq}{dx}\left[\frac{C}{m^3}\right]\]</td>
+          <td>\[q=\iiint_V \rho_V\,dV\]</td>
+        </tr>
+      </table><br>
+
+
+    <p><b><u>Ejemplo.</u>- </b> Hallar la carga que contenida en una esfera de radio a, si la $\rho_V$ varía con la distancia según 
+      la ecuación $\rho_V=a\,r\,[C/m^3]$</p>
+    <b>Soluci&oacute;n.-</b> 
+    <p><b>9.1.3 Cálculo del campo eléctrico ($\vec E$).</b></p>
+
+
+    
+    <center><img class="" src="img/img9-3.png" width="80%"></center><br>
+
+
+
+    <figure>
+      <center><img class="" src="img/fig9-4.png" width="80%"></center><br>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 9-4 </b>Cálculo de Campo Eléctrico</i></figcaption>      
+    </figure><br>
+
+    <figure>
+      <center><img class="" src="img/fig9-5.png" width="80%"></center><br>
+      <figcaption class="text text-center text-primary h4"><i><b>Figura 9-5 </b>Cargas Aisladas</i></figcaption>      
+    </figure><br>
+
+
+    
+                
+                    
+                    
+
+
+
+
+
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
