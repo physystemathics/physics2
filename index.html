@@ -11,20 +11,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    .main{
-        margin: 0px;
-        padding: 10px 50px ;
-        font-family: Arial;
-        font-size: 35px;
-        background: #f8e00b;
-        background: hsl(60, 100%, 80%);
-        /* background: #ffffffff; */
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover; /* Esto obliga al fondo a cubrir la pantalla sin deformarse */
-        background-attachment: scroll; /* Cambia "fixed" por "scroll", "fixed" rompe los fondos en Safari/iOS */
-        min-height: 100vh;
-        }
+   body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(60, 100%, 80%) !important;
+    min-height: 100vh;
+    height: auto;
+    } 
+
+  .main {
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    background: hsl(60, 100%, 80%) !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+    
+    /* Mantiene el fondo estirado en el celular */
+    min-height: 100vh;
+    height: auto;
+
+    /* Ajuste responsivo para que no se corte en el celular */
+    font-size: clamp(22px, 5vw, 35px); 
+    padding: 10px clamp(15px, 5vw, 50px); 
+    }    
     .escala:hover{
         transition: 1.5s;
         scale: 1.4;
