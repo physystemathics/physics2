@@ -97,6 +97,15 @@
       max-width: 100%;
       box-sizing: border-box;
   }
+  .table-responsive table {
+    font-size: clamp(14px, 3.5vw, 18px) !important;
+}
+
+/* Achica un poco más los títulos de las columnas para que quepan mejor */
+.table-responsive th {
+    font-size: clamp(13px, 3.2vw, 16px) !important;
+    white-space: nowrap; /* Evita que los títulos se amontonen feo hacia abajo */
+}
 </style>
 /* para animacion gif y png */
 <link  rel="stylesheet" href="styles.css">
@@ -299,8 +308,8 @@
     <p>Los 𝑒− (Electrones): orbitan entorno al núcleo en radios del orden de <math><msup><mn>10</mn><mn>-6</mn></msup></math> metros.
         Las partículas elementales tienen las siguientes propiedades.
     </p>
-    <div class="table-responsive">
-    <table  class="table table-bordered border-dark table-striped h4" >       
+    <div class="table-responsive" style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
+    <table class="table table-bordered align-middle" style="background-color: white; margin-bottom: 20px;">      
         <tr><td width="20%" Align="center"><b>PARTÍCULA</b></td>
             <td width="35%" Align="center"><b>MASA (Kg)</b></td>
             <td width="35%" Align="center"><b>CARGA (C)</b></td>
@@ -592,8 +601,8 @@
     <p>La carga eléctrica puede estar distribuida en longitudes, áreas y volúmenes, por lo tanto, podemos hablar de tres 
       tipos de densidad que son:</p>
 
-    <div class="table-responsive">
-      <table class="table table-bordered border-dark table-striped h4">
+    <div class="table-responsive" style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table class="table table-bordered border-dark table-striped h6">
                             
         <tr><td width="20%" Align="center"><b>DENSIDAD</b></td>
             <td width="15%" Align="center"><b>ESQUEMA</b></td>
