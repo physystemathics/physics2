@@ -80,18 +80,23 @@
 
 </style>
 <style>
-
   #li-reloj {
       background-color: #111827;
       color: #00ff88;
-      padding: 1px;
+      padding: 5px 15px; /* Un poco más de espacio interno para que respire */
       border-radius: 8px;
-      font-size: 3.5rem;
       font-weight: bold;
       font-family: 'Consolas', monospace;
       text-align: center;
-
-    }
+      
+      /* 📱 TAMAÑO ADAPTABLE INTELIGENTE: */
+      /* Medirá 1.8rem en celulares y crecerá hasta 3.5rem en computadoras */
+      font-size: clamp(1.8rem, 6vw, 3.5rem); 
+      
+      /* Evita que el reloj se desborde si el contenedor es estrecho */
+      max-width: 100%;
+      box-sizing: border-box;
+  }
 </style>
 /* para animacion gif y png */
 <link  rel="stylesheet" href="styles.css">
