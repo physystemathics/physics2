@@ -15,14 +15,17 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: hsl(60, 100%, 80%) !important;
+    background-color: hsl(245, 245, 245) !important;
     min-height: 100vh;
+  }
+  html{
+    font-size: 14px;
   }
 
   .main {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: hsl(60, 100%, 80%) !important;
+    background-color: hsl(245, 245, 245) !important;
     
     /* 📱 Evita que el texto se desborde hacia los costados */
     max-width: 100%;
@@ -159,7 +162,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center" style="background-color: rgb(13, 80, 43);">
+  <header id="header" class="header fixed-top d-flex align-items-center" style="background-color: rgb(10,25,47);">
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
@@ -230,33 +233,33 @@
   </header><!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar" style="background-color: rgb(0, 80, 0);">
+  <aside id="sidebar" class="sidebar" style="background-color: rgb(0, 0, 128);">
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed text-white" style="background-color: rgb(0, 90, 0);" href="index.html">
+        <a class="nav-link collapsed text-white" style="background-color: rgb(0, 0, 128);" href="index.html">
           <i class="bi bi-person"></i>
           <span >PERFIL</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item" >
-        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="description.html">
+        <a class="nav-link text-white" style="background-color: rgb(0, 0, 128);" href="index.html">
           <i class="bi bi-grid text-white"></i>
           <span>DESCRIPCIÓN</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item" >
-        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="contents.html">
+        <a class="nav-link text-white" style="background-color: rgb(0, 0, 128);" href="index.html">
           <i class="bi bi-menu-button-wide text-white"></i>
           <span>CONTENIDO</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item" >
-        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="bibliografia.html">
+        <a class="nav-link text-white" style="background-color: rgb(0, 0, 128);" href="index.html">
           <i class="bi bi-menu-button-wide text-white"></i>
           <span>BIBLIOGRAFÍA</span>
         </a>
@@ -265,23 +268,41 @@
       <li class="nav-heading">MÓDULOS</li>
       
       <li class="nav-item">
-        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="https://physystemathics.github.io/physics2/">
+        <a class="nav-link text-white" style="background-color: rgb(0, 0, 128);" href="https://physystemathics.github.io/physics2a/">
+          <i class="bi bi-menu-button-wide"></i>
+          <span>COULOMB</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link text-white" style="background-color: rgb(0, 0, 128);" href="https://physystemathics.github.io/physics2b/">
           <i class="bi bi-menu-button-wide"></i>
           <span>CAMPO</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="https://physystemathics.github.io/physics2a/">
+        <a class="nav-link text-white" style="background-color: rgb(0, 0, 128);" href="https://physystemathics.github.io/physics2c/">
           <i class="bi bi-menu-button-wide"></i>
-          <span>CAPACITORES</span>
+          <span>POTENCIAL</span>
         </a>
       </li><!-- End Profile Page Nav -->
-
       <li class="nav-item">
-        <a class="nav-link text-white" style="background-color: rgb(0, 90, 0);" href="mod3.html">
+        <a class="nav-link text-white" style="background-color: rgb(0, 0, 128);" href="https://physystemathics.github.io/physics2d/">
+          <i class="bi bi-menu-button-wide"></i>
+          <span>CONDENSADOR</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link text-white" style="background-color: rgb(0, 0, 128);" href="https://physystemathics.github.io/physics2e/">
           <i class="bi bi-menu-button-wide"></i>
           <span>CORRIENTE</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link text-white" style="background-color: rgb(0, 0, 128);" href="index.html">
+          <i class="bi bi-menu-button-wide"></i>
+          <span>EJERCICIOS</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
@@ -289,848 +310,7 @@
 
   </aside><!-- End Sidebar <main id="main" class="main"> -->
   <main id="main" class="main">
-    <p><b>8 ELECTRICIDAD</b></p>
-    <p>La electricidad se ocupa del estudio de cargas eléctricas y sus interacciones, se divide en:
-        <ul>
-            <li><b><u>Electrostática</u>: </b>Que considera las cargas en reposo.</li>
-            <li><b><u>Electrodinámica</u>: </b>Que toma en cuenta el movimiento de las cargas.</li>
-        </ul> 
-    </p>
-    <p class="iem" id="1.2.1"><b>8.1 Descripción microscópica de la materia.</b></p>
-    <p>Toda la materia según el modelo del átomo de Bohr ,está constituida por partículas 
-        elementales que tienen vida permanente y las más conocidas son los: protones, 
-        electrones y neutrones.
-    </p>
-    <figure>
-        <center><img class="" src="img/fig8-1.gif" width="100%"></center>
-        <figcaption class="text text-center text-primary h4"><i><b>Figura 8-1 </b> Descripción microscópica de la materia</i></figcaption>      
-    </figure><br>
-    <p>Los <b>\(e^-\)</b>(electrones): orbitan entorno al núcleo en radios del orden de \(10^{-10}\) metros, \(R=1\;\overset{o}{A}\).
-       <br> Las partículas elementales tienen las siguientes propiedades.
-    </p>
-    <div class="container-fluid px-3 px-md-5 my-4">
-    <div class="table-responsive" style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
-    <table class="table table-bordered align-middle" style="background-color: white; margin-bottom: 20px;">      
-        <tr><td width="15%" Align="center"><b>PARTÍCULA</b></td>
-            <td width="5%" Align="center"><b></b></td>
-            <td width="20%" Align="center">PROPIEDAD <br>CARGA <br>ELÉCTRICA</td>
-            <td width="20%" Align="center"><b>MASA</b></td>
-            <td width="20%" Align="center"><b>MOMENTO <br> DIPOLAR <br> MAGNÉTICO</b></td>
-            <td width="20%" Align="center"><b>SPIN</b></td>
-        </tr>
-        <tr>
-          <td>Electrón</td>
-          <td>\[e^-\]</td>
-          <td>\[-e\]</td>
-          <td>\[m_e\]</td>
-          <td>\[\checkmark\]</td>
-          <td>\[\checkmark\]</td>               
-        </tr>
-        <tr>
-          <td>Protón</td>
-          <td>\[p\;\text{,}\;e^+\]</td>
-          <td>\[+e\]</td>
-          <td>\[m_p\]</td>
-          <td>\[\checkmark\]</td>
-          <td>\[\checkmark\]</td>               
-        </tr>
-        <tr>
-          <td>Neutrón</td>
-          <td>\[n\]</td>
-          <td>\[----\]</td>
-          <td>\[m_n\]</td>
-          <td>\[\checkmark\]</td>
-          <td>\[\checkmark\]</td>               
-        </tr>                       
-    </table> 
-    \[e=1,67\,\times 10^{-19}\,[C]\]
-    \[m_{e^-}=9,11\,\times 10^{-31}\,[kg]\]
-    \[m_p=1,67\,\times 10^{-27}\,[kg]\]
-    \[m_n=1,67\,\times 10^{-27}\,[kg]\]
-
-    <p> 
-    <ul>
-      <li>Suponer que la carga eléctrica está siempre cuantizada. Y es el principio de
-          cuantización de la carga. </li>
-          <div class="container-fluid">
-              <center>
-              <p class="border border-danger h2 pt-3 pb-3 disp escala">
-                  <math><mi>q</mi><mo>=</mo><mi>n</mi><mi>e</mi></math>
-                </p>
-              </center>
-          </div>
-            <center><p><math><mi>n</mi><mo>=</mo><mn>1,2,3, ...</mn></math></center></p>
-      <li>Suponer el principio de conservación de carga eléctrica</li>
-      <center><img class=""  src="img/conservacionCarga.png" width="80%"></center>
-      </ul>   
-    </p>
-    <p>Los electrones no solo giran en torno al núcleo sino giran en sobre un eje que pasa
-        por uno de sus diámetros.
-    </p><br>
-    <figure>
-        <center><img class="escala" src="img/fig8-2.webp" width="80%"></center>
-        <figcaption class="text text-center text-primary h4"><i><b>Figura 8-2 </b>Traslación y Rotación del electrón</i></figcaption>      
-    </figure><br>
-    <img class="escala" src="img/PruebaAtomo-enhanced.gif" width="50%" alt="">
-    <p>El giro de los electrones, produce dipolo magnético
-    </p>
-    <figure>
-        <center><img class="escala" src="img/dipoloMagnetico.jpg" width="50%"></center>
-        <figcaption class="text text-center text-primary h4"><i><b>Figura 8-3 </b>Dipolo Magnético</i></figcaption>      
-    </figure><br>
-    <p><b>Intensidad de Corriente (i).- </b>Se define como la cantidad de carga eléctrica que atraviesa la sección transversal
-    de un material conductor en la unidad de tiempo</p><br>
-    <figure>
-        <center><img class="escala" src="img/intensidadCorriente.png" width="60%"></center>
-        <figcaption class="text text-center text-primary h4"><i><b>Figura 8-4 </b>Corriente eléctrica</i></figcaption>      
-    </figure><br>
-    <p class="text-center h1">
-    \[i=\frac{q}{t}\quad\left[\frac{C}{s}\right]\]
-    </p><br>
-    <p>en términos diferenciales</p>
-    <div class="row border-danger ">
-        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
-            \[i=\frac{dq}{dt}\quad\left[ A \right]\]
-        </div>
-        <!-- NOMBRE FORMULA -->
-        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
-            <center><b>Ecuación 8.1a</b></center>
-      </div>
-    </div><br>
-    <p>Integrando:</p>
-    <div class="row border-danger ">
-        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
-            \[q=\int i\, dt\]
-        </div>
-        <!-- NOMBRE FORMULA -->
-        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
-            <center><b>Ecuación 8.1b</b></center>
-      </div>
-    </div><br>
     
-    <p><b>Clasificación.</b><br>
-    <p>Los materiales desde un punto de vista eléctrico, se clasifican en: materiales aislantes, conductores,
-      semiconductores y superconductores.
-        <ul>
-            <li><b>Aislantes: </b>
-            No dejan pasar la corriente eléctrica través de ellos, no se arrancafácilmente 𝑒− de sus átomos ej, porcelana, vidrio, arcilla. </li>
-            <li><b>Conductores: </b>
-                Presentan 𝑒− libres en las últimas órbitas de sus átomos.Dejan pasar la corriente eléctrica a través de ellos. Ej metales: Cu, Al; gases
-            Na, Hg. </li>
-            <li><b>Semiconductores: </b>
-            En determinadas condiciones dejan pasar la electricidad y en otras se oponen. Ala circulación de corriente</li>
-            <li><b>Superconductores: </b>
-            No presentan resistencia eléctrica y se manifiesta un fuerte campo magnético</li>
-        </ul>   
-    </p>
-    <p><u><b>Nota</b></u>.- Los materiales no conductores, son llamadas tambien aisladores o diel&eacute;ctricos.</p>
-    <br>
-    <p><b>8.2 Electrización de la materia.</b><br>
-    <p>Es el exceso o deficiencia de electrones que pueden adquirir un material.</p>
-    <p>La materia puede electrizarse de dos maneras.
-        <ul>
-            <li><b>Fricción: </b>Contacto físico entre dos materiales.
-                <figure>
-                    <center><img class="" src="img/friccion.jfif" width="90%"></center>
-                    <figcaption class="text text-center text-primary h4"><i><b>Figura 8-5 </b>Electrización por Fricción</i></figcaption>      
-                </figure></li>
-            <li><b>Por inducción: </b>Cuando no existe contacto físico.
-                <figure>
-                    <center><img class="" src="img/induccion.png" width="100%"></center>
-                    <figcaption class="text text-center text-primary h4"><i><b>Figura 8-6 </b>Electrización por inducción</i></figcaption>      
-                </figure><br>
-                <figure>
-                    <center><img class="" src="img/tipoElectrizacion.jpg" width="100%"></center>
-                    <figcaption class="text text-center text-primary h4"><i><b>Figura 8-7 </b>Tipos de Electrización</i></figcaption>      
-                </figure>
-            </li>
-          </u>
-    
-    <!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb -->
-    <!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb --><!--Ley de Coulomb -->
-    <br><br>
-    <p><b>8.3 Ley de Coulomb</b></p>
-    <p><b>8.3.1 Ley de las cargas.- </b>Experimentalmente se comprueba que cargas del mismo signo sufren interacciones
-      de repulsión y que cargas del signo contrario se atraen y esto se conoce como la
-      ley de las cargas.</p>
-      <center><img class="" src="img/fig8.3.1.png" width="50%"></center>
-    <p>La ecuación que permite el cálculo de la fuerza eléctrica se
-        conoce como la Ley de Coulomb que dice: <i>Si se tiene dos cargas eléctricas
-        separadas una distancia "d" entre ellas, entonces la fuerza que se ejerce a una  distancia
-        es central y está ubicada sobre la línea de acción que une las dos cargas y si las
-        cargas son positivas, la fuerza será repulsiva.</i></p><br>
-        <figure>
-            <center><img class="" src="img/fig8-8.png" width="80%"></center>
-            <figcaption class="text text-center text-primary h4"><i><b>Figura 8-8 </b>Ley de Coulomb</i></figcaption>      
-        </figure><br>
-    <p>La fuerza: </p>
-    \[F\propto q_1\,q_2\]
-    \[F\propto \frac{1}{d^2}\]
-    \[F\propto f(\text{medio},\varepsilon_0)\]
-    <p>As&iacute;, obtenemos, la fuerza entre las cargas:</p>
-    <div class="row border-danger ">
-      <center><div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
-        \[F=\frac{1}{4\pi\varepsilon_0}\frac{q_1\,q_2}{d^2}\]
-      </div></center>
-      <!-- NOMBRE FORMULA -->
-    </div>
-    <p>Permitividad en el vac&iacute;o: \(\varepsilon_0=8,85\times 10^{-12}\; [F/m]\)</p>
-    <p>tambien:</p>
-    \[k=\frac{1}{4\pi\varepsilon_0}\]
-    <div class="row border-danger ">
-      <center><div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
-        \[F=k\frac{q_1\,q_2}{d^2}\]
-      </div></center>
-      <!-- NOMBRE FORMULA -->
-    </div>
-    <p>En el SI, la constante k se expresa:</p>
-    \[k=9\times10^9 \left[\frac{N\,m^2}{C^2}\right]\]
-    <br><br>
-    <p><b>8.3.2 Ley de Coulomb: Forma vectorial</b></p><br>
-    <center><img class="" src="img/fig8.3.2.png" width="90%"></center><br>
-    <p>As&iacute;, tenemos:</p><br>
-    <figure>
-      <center><img class="" src="img/fig8-9.png" width="90%"></center><br>
-      <figcaption class="text text-center text-primary h4"><i><b>Figura 8-9 </b>Ley de Coulomb - Forma Vectorial</i></figcaption>      
-    </figure><br>
-    <p>La ecuacion matem&aacute;tica</p>
-        <div class="row border-danger ">
-            <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
-              \[\vec F=\frac{1}{4\pi\varepsilon_0}\frac{q_1\,q_2}{r^2}\,\hat u_r\]
-            </div>
-            <!-- NOMBRE FORMULA -->
-            <div class="col-md-4 pt-3 pb-3 border border-danger h4">
-                <center><b>Ecuación 8.2</b></center>
-          </div>
-        </div>
-
-        <p>Donde: </p>
-        Constante de Coulomb: 
-      \[k=\frac{1}{4\pi\varepsilon_0}=9\times10^9 \left[\frac{N\,m^2}{C^2}\right]\] 
-          Permitividad en el vac&iacute;o: 
-          \[\varepsilon_0=8,85\times 10^{-12}\; [F/m]\]<br>
-
-    <p><i>*Cuando existen dos cargas puntuales existe una fuerza de atracción o de repulsión</i></p><br>
-    <figure>
-        <center><img class="" src="img/fig8-10.png" width="80%"></center>
-        <figcaption class="text text-center text-primary h4"><i><b>Figura 8-10 </b>Fuerzas de Repulsión y Atracción</i></figcaption>      
-    </figure><br>
-    <p>Cuando se tiene más de dos cargas eléctricas y se desea calcular la fuerza sobre
-        una de ellas, entonces aplicamos el principio de superposición.</p><br>
-    
-        <figure>
-          <center><img class="" src="img/fig8-11.png" width="100%"></center><br>
-          <figcaption class="text text-center text-primary h4"><i><b>Figura 8-11 </b>Principio de Superposición</i></figcaption>      
-        </figure><br>
-        <p>Hallamos la fuerza entre cada par de cargas, sobre la carga en cuestión y luego
-          sumamos para obtener la fuerza resultante.</p>
-          <div class="w-100 my-3 px-2" style="overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%;">
-    <div style="min-width: 550px; padding-bottom: 5px;">
-          \[\vec F=\sum\limits_{i=1}^{n} {\vec F}_i\]
-          \[\vec F=\vec F_1+\vec F_2+\vec F_3+\vec F_4+ .......+\vec F_k+.......+\vec F_n\]
-          \[\vec F=k\frac{q_1\,q_0}{r_1^2}\,\hat u_{r_1}+k\frac{q_2\,q_0}{r_2^2}\,\hat u_{r_2}+.........+k\frac{q_n\,q_0}{r_n^2}\,\hat u_{r_n}\]
-    </div></div>
-        <div class="row border-danger ">
-            <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
-              \[\vec F=k\,q_0\sum\limits_{i=1}^{n} \frac{q_i}{r_i^2}\,\hat u_{r_i}\]
-            </div>
-            <!-- NOMBRE FORMULA -->
-            <div class="col-md-4 pt-3 pb-3 border border-danger h4">
-                <center><b>Ecuación 8.3</b></center>
-          </div>
-        </div><br>
-
-    <p><b>Ejemplo.-</b>Hallar la fuerza que se ejerce sobre la carga que se encuentra en el
-        origen de eje de coordenadas, segun la distribución de cargas mostradas, en el plano.</p><br>
-        <center><img class="" src="img/ejem8-1.png" width="70%"></center><br>
-        <b>Soluci&oacute;n.-</b> 
-        <center><img class="" src="img/ejem8-2.png" width="70%"></center><br>
-        \[\vec{F}=\vec{F_1}+\vec{F_2}\]
-        \[\vec{F}=\frac{k\left(2\,q^2\right)}{a^2}\hat{\imath}+\frac{k\left(2\,q^2\right)}{\left(2\,a\right)^2}\hat{\jmath}\]
-        <div class="row border-danger ">
-          <center><div class="col-md-10 pt-3 pb-3 border border-danger h1">
-            \[\vec{F}=\frac{2\,k\,q^2}{a^2}\left(\hat{\imath}-\frac{1}{4}\hat{\jmath}\right)\quad \left[N\right]\]
-          </div></center>
-          <!-- NOMBRE FORMULA -->
-        </div><br>
-        
-    <p><b>Ejemplo.-</b>hallar la fuerza sobre una carga ubicada en el vértice: </p>
-        <center><img class="" src="img/ejem8-3.png" width="105%"></center>
-
-    <br><br><hr><hr><br><br>
-     <!-- Campo Electrico--> <!-- Campo Electrico--> <!-- Campo Electrico-->  
-    <!-- Campo Electrico--> <!-- Campo Electrico--> <!-- Campo Electrico-->
-    <p><b>9 Campo Eléctrico y Potencial Electrostático</b></p>
-    <p><b>9.1 Campo Eléctrico</b></p>
-    <p>Es una situación física que se manifiesta alrededor de una carga eléctrica y cambia las propiedades del medio.</p>
-      <center><img class="escala" src="img/fig9-1a.png" width="50%"><img class="escala" src="img/fig9-1b.png" width="50%"></center> <br>
-        
-    <p>Se define como la fuerza eléctrica que se ejerce sobre una carga unitaria (+), denominada carga de prueba.</p>
-    <figure>
-      <center><img class="" src="img/fig9-1.png" width="70%"></center> <br>
-    <figcaption class="text text-center text-primary h4"><i><b>Figura 9-1</b>Campo Eléctrico</i></figcaption>      
-    </figure><br>
-    \[E=\frac{\text{Fuerza}}{\text{Carga de prueba}}\]
-    <div class="row border-danger ">
-      <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
-        \[\vec E=\frac{\vec F}{\vert q_p^+\lvert}\;\left[\frac{N}{C}\right]\]
-      </div>
-      <!-- NOMBRE FORMULA -->
-      <div class="col-md-4 pt-3 pb-3 border border-danger h4">
-          <center><b>Ecuación 9.1</b></center>
-    </div>
-    </div><br><br>
-
-  <figure>
-    <center><img class="" src="img/fig9-2.png" width="100%"></center> <br>
-    <figcaption class="text text-center text-primary h4"><i><b>Figura 9-2 </b>Dirección Campo Eléctrico</i></figcaption>      
-  </figure><br>
-    <p><b>9.1.1 Líneas de campo eléctrico</b></p>
-    Son líneas imaginarias que permiten visualizar el campo eléctrico y tienen las siguientes propiedades.
-    <ol>
-      <li>Salen de cargas positivas que son fuentes generadoras de líneas y terminan en cargas negativas que son sumideros.</li>
-      <li>El campo eléctrico es un vector tangente a una línea en cualquier punto.</li>
-      <li>El número de líneas que se dibuja por unidad de área es proporcional a la magnitud del campo eléctrico.</li>
-      <li>Las líneas de campo eléctrico no se cruzan.</li>
-    </ol><br>
-    <figure>
-      <center><img class="" src="img/lineasCampoa.png" width="80%"></center><br>
-      <center><img class="" src="img/lineasCampob.png" width="60%"></center><br>
-      <center><img class="" src="img/lineasCampoc.webp" width="100%"></center><br>
-      <figcaption class="text text-center text-primary h4"><i><b>Figura 9-3 </b>Líneas de Campo Eléctrico</i></figcaption>      
-    </figure><br><br>
-
-    <p><b>9.1.2 Densidad de carga</b></p>
-    <p>La carga eléctrica puede estar distribuida en longitudes, áreas y volúmenes, por lo tanto, podemos hablar de tres 
-      tipos de densidad que son:</p>
-
-    <div class="container-fluid px-3 px-md-5 my-4">
-      <div class="table-responsive" style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
-      <table class="table table-bordered border-dark table-striped h6">
-                            
-        <tr><td width="20%" Align="center"><b>\[\text{DENSIDAD}\]</b></td>
-            <td width="40%" Align="center"><b>\[\text{ESQUEMA}\]</b></td>
-            <td width="20%" Align="center"><b>\[\rho\quad\text{(DENSIDAD)}\]</b></td>
-            <td width="20%" Align="center"><b>\[\text{q}\]</b></td>
-        </tr>
-        <tr>
-          <td>Lineal</td>
-          <td><br><br><img src="img/lineal.png" width="120%" class="zoomder"></td>
-          <td>\[\rho_L=\frac{q}{L}=\frac{dq}{dx}\left[\frac{C}{m}\right]\]</td>
-          <td>\[q=\int_L \rho_L\,dx\]</td>
-        </tr>
-        <tr>
-          <td>Superficial</td>
-          <td><img src="img/superficial.png" width="50%" class="zoomder"></td>
-          <td>\[\rho_A=\frac{q}{A}=\frac{dq}{dA}\left[\frac{C}{m^2}\right]\]</td>
-          <td>\[q=\iint_A \rho_A\,dA\]</td>
-        </tr>
-        <tr>
-          <td>Volum&eacute;trica</td>
-          <td><img src="img/volumetrica.png" width="40%" class="zoomder"></td>
-          <td>\[\rho_V=\frac{q}{L}=\frac{dq}{dx}\left[\frac{C}{m^3}\right]\]</td>
-          <td>\[q=\iiint_V \rho_V\,dV\]</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-    <p><b><u>Ejemplo.</u>- </b> Hallar la carga que contenida en una esfera de radio a, si la $\rho_V$ varía con la distancia según 
-      la ecuación \(\rho_V=a\,r\,[C/m^3]\)</p>
-      <center><img class="" src="img/ejem9-1.png" width="60%"></center><br>
-    <b>Soluci&oacute;n.-</b> 
-      \[\rho_V=a\,r\,\left[\frac{C}{m^3}\right]\]
-      \[q=\iiint\rho_V\,dV\]
-      \[dV=4\,\pi\,r^2\,dr\]
-      <div class="row border-danger ">
-        <center><div class="col-md-8 pt-3 pb-3 border border-danger h1">
-          \[q=a^5\,\pi\; \left[C\right]\]
-        </div></center>
-        <!-- NOMBRE FORMULA -->
-      </div><br>
-
-    <br>
-    <p><b>9.1.3 Cálculo del campo eléctrico (\(\vec E\)).</b></p>
-    <p>El campo eléctrico 𝐸ത en un punto del espacio, puede deberse a cargas eléctricas aisladas, 
-      distribuciones lineales, superficiales y volumétricas de carga . El campo resultante por el teorema
-      de superposición será igual a la suma vectorial de los campos eléctricos producidos por cargas y 
-      distribuciones de cada carga.</p>
-      <p>Para deducir una ecuación general vamos a ver primero el campo eléctrico producido por una carga
-         en un punto del espacio.</p>
-    
-    <center><img class="" src="img/fig9-1-3.png" width="80%"></center>
-    \[\vec{E}=\frac{\vec{F}}{\vert q^+\lvert}\]
-    Pero: <br>
-    \[\vec F=k\,\frac{q_1\,q_2}{r^2}\,\hat u_r\]
-    \[\vec F=k\,\frac{q\,\vert q^+\lvert}{r^2}\,\hat u_r\]
-    <div class="row border-danger ">
-      <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
-        \[\vec{E}=k\,\frac{q}{r^2}\,\hat u_r\]
-      </div>
-      <!-- NOMBRE FORMULA -->
-      <div class="col-md-4 pt-3 pb-3 border border-danger h4">
-          <center><b>Ecuación 9.2</b></center>
-    </div>
-    </div><br>
-
-    <figure>
-      <center><img class="" src="img/fig9-4.png" width="80%"></center><br>
-      <figcaption class="text text-center text-primary h4"><i><b>Figura 9-4 </b>Cálculo del Campo Eléctrico</i></figcaption>      
-    </figure><br>
-    
-    \[E\propto f(\text{medio},k)\]
-    \[E\propto q\]
-    \[E\propto \frac{1}{r^2}\]
-    <p>Si tenemos varias cargas aisladas:</p><br>
-    <figure>
-      <center><img class="" src="img/fig9-5.png" width="90%"></center><br>
-      <figcaption class="text text-center text-primary h4"><i><b>Figura 9-5 </b>Cargas Aisladas</i></figcaption>      
-    </figure>
-
-    <div class="w-100 my-3 px-2" style="overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%;">
-      <div style="min-width: 550px; padding-bottom: 5px;">
-            \[\vec{E}_\therefore=\vec E_1+\vec E_2+\vec E_3+ .......+\vec E_k+.......+\vec E_n\]
-            \[\vec{E}_\therefore=k\frac{q_1}{r_1^2}\,\hat u_{r_1}+k\frac{q_2}{r_2^2}\,\hat u_{r_2}+k\frac{q_3}{r_3^2}\,\hat u_{r_3}+.........+k\frac{q_n}{r_n^2}\,\hat u_{r_n}\]
-      </div>
-    </div>
-
-      <div class="row border-danger ">
-          <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
-            \[\vec{E}_\therefore=k\sum\limits_{i=1}^{n} \frac{q_i}{r_i^2}\,\hat u_{r_i}\]
-          </div>
-          <!-- NOMBRE FORMULA -->
-          <div class="col-md-4 pt-3 pb-3 border border-danger h4">
-              <center><b>Ecuación 9.3</b></center>
-        </div>
-      </div><br>
-      <p><b>9.1.4 Distribución lineal de carga</b></p>
-      <p>Para distribución lineal de carga</p>
-      <figure>
-        <center><img class="" src="img/fig9-6.png" width="90%"></center><br>
-        <figcaption class="text text-center text-primary h4"><i><b>Figura 9-6 </b>Distribución lineal de carga</i></figcaption>      
-      </figure><br>
-      <p>Campo debido a distribución lineal.</p>
-      \[E_L=\int dE=\int \frac{k\,dq}{r_L^2}\,\hat u_{r_L}\]
-      <div class="row border-danger ">
-        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
-          \[E_L=k\,\int \frac{\rho_L}{r_L^2}\,dL\,\hat u_{r_L}\]
-        </div>
-        <!-- NOMBRE FORMULA -->
-        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
-            <center><b>Ecuación 9.4</b></center>
-      </div>
-      </div><br>
-
-      <p><b>9.1.5 Distribución superficial de carga</b></p>
-      <p>Para distribución superficial de carga</p>
-      <figure>
-        <center><img class="" src="img/fig9-7.png" width="90%"></center><br>
-        <figcaption class="text text-center text-primary h4"><i><b>Figura 9-7 </b>Distribución superficial de carga</i></figcaption>      
-      </figure><br>
-      <p>Campo debido a distribución superficial.</p>
-      \[E_A=\int dE=\int \frac{k\,dq}{r_A^2}\,\hat u_{r_A}\]
-      <div class="row border-danger ">
-        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
-          \[E_A=k\,\iint \frac{\rho_A}{r_A^2}\,dA\,\hat u_{r_A}\]
-        </div>
-        <!-- NOMBRE FORMULA -->
-        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
-            <center><b>Ecuación 9.5</b></center>
-      </div>
-      </div><br>
-      <p><b>9.1.6 Distribución volumétrica de carga</b></p>
-      <p>Para distribución volumétrica de carga</p>
-      <figure>
-        <center><img class="" src="img/fig9-8.png" width="90%"></center><br>
-        <figcaption class="text text-center text-primary h4"><i><b>Figura 9-8 </b>Distribución volumétrica de carga</i></figcaption>      
-      </figure><br>
-      <p>Campo debido a distribución volumétrica.</p>
-      \[E_V=\int dE=\int \frac{k\,dq}{r_V^2}\,\hat u_{r_V}\]
-      <div class="row border-danger ">
-        <div class="col-md-8 pt-3 pb-3 border border-danger h1 escala">
-          \[E_V=k\,\iiint \frac{\rho_V}{r_V^2}\,dV\,\hat u_{r_V}\]
-        </div>
-        <!-- NOMBRE FORMULA -->
-        <div class="col-md-4 pt-3 pb-3 border border-danger h4">
-            <center><b>Ecuación 9.6</b></center>
-      </div>
-      </div><br>
-      <p>Ecuación general para el cálculo del campo eléctrico:</p>
-        \[E=E_{\therefore}+E_L+E_A+E_V\]
-      <div class="w-100 my-3 px-2" style="overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%;">
-        <div style="min-width: 550px; padding-bottom: 5px;">
-          \[E=k\sum\frac{q_i}{r_i^2}\,\hat u_{r_i}+k\,\int \frac{\rho_L}{r_L^2}\,dL\,\hat u_{r_L}+
-          k\,\iint \frac{\rho_A}{r_A^2}\,dA\,\hat u_{r_A}+k\,\iiint \frac{\rho_V}{r_V^2}\,dV\,\hat u_{r_V}\]  
-        </div>
-      </div>
-
-      <div class="row border-danger ">
-        <div class="col-md-9 pt-3 pb-3 border border-danger h1 ">
-          <div class="w-100 my-3 px-2" style="overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%;">
-            <div style="min-width: 550px; padding-bottom: 5px;">
-              \[E=k\sum\frac{q_i}{r_i^2}\,\hat u_{r_i}+k\,\int \frac{\rho_L}{r_L^2}\,dL\,\hat u_{r_L}+
-              k\,\iint \frac{\rho_A}{r_A^2}\,dA\,\hat u_{r_A}+k\,\iiint \frac{\rho_V}{r_V^2}\,dV\,\hat u_{r_V}\]  
-            </div>
-          </div>
-        </div>
-        <!-- NOMBRE FORMULA -->
-        <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-            <center><b>Ecuación 9.7</b></center>
-      </div>
-      </div><br><br>
-      <hr><br><br>
-
-       <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA -->
-        <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA -->
-
-      <p><b>10.5 Condensadores y dieléctricos</b></p>
-      <p>Un dieléctrico es un material aislante que se introduce entre las armaduras de un condensador y permite aumentar
-         la capacidad con respecto al vacío.</p>
-
-      <div class="row">
-        <div class="col-md-6 pt-3 pb-3  h1">
-          <ul><li>Vacío</li></ul>
-          <center><img class="" src="img/a1.png" width="80%"></center>
-          \[C_0=\varepsilon_0 \frac{A}{d}\]
-          \[E_0\,d=V_0\]
-          \[C_0=\frac{q}{V_0}\]
-        </div>
-        <div class="col-md-6 pt-3 pb-3  h1">
-          <ul><li>Con Diel&eacute;ctrico</li></ul>
-          <center><img class="" src="img/a2.jpg" width="80%"></center>
-            \[E=E_0-E_{ind}&lt;E_0\]
-            \[V&lt;V_0\]
-            \[C=\frac{q}{V}\]
-        </div>
-      </div>
-      \[C_0&lt;C\]
-      \[C=K\,C_0\]
-      \[K:\text{Constante Diel&eacute;ctrico}\]
-      \[K=\frac{\varepsilon}{\varepsilon_0}=\varepsilon_r \qquad \text{Permitividad relativa}\]
-      \[C=K\,\varepsilon_0 \frac{A}{d}\]
-      <div class="row border-danger ">
-        <center><div class="col-md-8 pt-3 pb-3 border border-danger h1">
-          \[C=\varepsilon \frac{A}{d}\]
-        </div></center>
-        <!-- NOMBRE FORMULA -->
-      </div><br>
-      <div class="row">
-        <div class="col-md-6 pt-3 pb-3  h1">
-            \[K=\frac{E_0}{E}\]
-        </div>
-        <div class="col-md-6 pt-3 pb-3  h1">
-          \[K=\frac{V}{V_0}\]
-        </div>
-      </div>
-      <p>Si aplicamos la ley de Gauss a un condensador plano:</p>
-        <ul><li>Con Diel&eacute;ctrico</li></ul>            
-        \[\oint\!\!\!\!\int_{(A)} \vec{E}\cdot d\vec{s}=\frac{q-q^l}{\varepsilon_{0}}\]
-        \[E\,A=\frac{q-q^l}{\varepsilon_{0}}\]
-        \[\varepsilon_{0}\,E=\frac{q}{A}-\frac{q^l}{A}\]
-        \[\varepsilon_{0}\,E=D-P\]
-        <div class="row border-danger ">
-          <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-              <div style="min-width: 550px; padding-bottom: 5px;">
-                \[\vec{D}=\varepsilon_{0}\,\vec{E}+\vec{P}\]
-            </div>
-          </div>
-          <!-- NOMBRE FORMULA -->
-          <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-              <center><b>Ecuación 10.13</b></center>
-        </div>
-      </div>
-
-      <ul><li>Vacío</li></ul>
-      \[P=0 \qquad ; \qquad q^l=0\]
-      <p>Para el vacío, el desplazamiento:</p>
-      \[D=\varepsilon_{0}\,E\]
-      <p>Si aplicamos, la ley de Gauss</p>
-      \[\oint\!\!\!\!\int \vec{E}\cdot d\vec{s}=\frac{q}{\varepsilon_{0}}\]
-      \[\oint\!\!\!\!\int \varepsilon_{0}\vec{E}\cdot d\vec{s}=q\]
-      <div class="row border-danger ">
-        <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-            <div style="min-width: 550px; padding-bottom: 5px;">
-              \[\oint\!\!\!\!\int \vec{D}\cdot d\vec{s}=q\]
-          </div>
-        </div>
-        <!-- NOMBRE FORMULA -->
-        <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-            <center><b>Ecuación 10.14</b></center>
-      </div>
-      </div>
-      <p>Además:</p>
-      \[q^l=q\left(1-\frac{1}{K}\right)\]
-      \[K:\text{Constante Diel&eacute;ctrico}\]
-      <p>No olvidar que:</p>
-      \[\vec{D}=\varepsilon_{0}\,\vec{E}+\vec{P}\]
-      <center><p><b>Suma de los 3 vectores.</b></p></center>
-      <br><br>
-      <hr>
-      <br><br>
-    
-      <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA -->
-     <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA --> <!-- NOMBRE FORMULA -->
-
-      <p><b>11 FUNDAMENTOS DE CORRIENTE CONTINUA Y CIRCUITOS</b></p>
-      <p><b>11.1 Corriente eléctrica</b></p>
-      <p>Se define la intensidad de corriente eléctrica como la cantidad de carga que atraviesa la sección transversal de un 
-        conductor en la unidad de tiempo.</p>
-      
-
-        \[i=\frac{q}{t}\]
-        Donde:
-        <center>i: Intensidad de corriente en Amperios [Amp] <br>
-          q: Carga eléctrica en Coulombs [C] <br>
-          t: tiempo [s]</center>
-      <p><b>11.4 Resistencia</b></p>
-      <p>Se denomina a la propiedad que tienen los materiales de oponerse al paso de la corriente eléctrica.</p>
-      <p>Para encontrar una ecuación que permita demostrar que la resistencia eléctrica de un material depende de 
-        la geometría (longitud y área) y del material (resistividad) vamos a suponer:</p>
-
-
-
-      <p>Si n es el n&uacute;mero de electrones por unidad de Volumen.</p>
-      <p>La carga total:</p>
-      \[q_t=n\,(Vol)\,e\]
-      \[q_t=n\,(A\,l)\,e\]
-      <p>El electr&oacute;n, recorre:</p>
-      \[l=v\,\Delta t\]
-      <p>La intensidad de corriente (microscópico):</p>
-      \[i=\frac{q_t}{\Delta t}\]
-      <p>Reemplazando:</p>
-      \[i=\frac{n\,(A\,v\,\Delta t)\,e}{\Delta t}\]
-      \[i=n\,e\,A\,v_d\]
-      <p>Velocidad de desplazamiento</p>
-      \[v_d=\frac{i}{n\,e\,A}\quad \left[\frac{m}{s}\right]\]
-      <p>La densidad de corriente</p>
-      \[J=\frac{i}{A} \quad \left[\frac{Amp}{m^2}\right]\]
-      \[v_d=\frac{J}{n\,e}\quad \left[\frac{m}{s}\right]\]
-      <div class="row border-danger ">
-        <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-            <div style="min-width: 550px; padding-bottom: 5px;">
-              \[J=v_d\,n\,e\]
-          </div>
-        </div>
-        <!-- NOMBRE FORMULA -->
-        <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-            <center><b>Ecuación 11.1</b></center>
-      </div>
-      <p><b>Ejemplo: </b>\(J_{cu}=2,5\,\left[\frac{Amp}{mm^2}\right]\)</p>
-      <hr>
-      <p>Adem&aacute;s:</p>
-      \[\vec{J}=-n\,e\,\vec{v}_d\]
-      \[i=\vec{J}\cdot\vec{A}\]
-      \[i=\iint\vec{J}\cdot d\vec{A}\]
-      <p>La resistencia de un conductor entre dos puntos, al cual le aplicamos un d.d.p V, entre esos puntos y midiendo
-        la corriente (i).</p>
-
-
-
-        \[R=\frac{V}{i}\]
-        \[R=\frac{\int \vec{E}\cdot d\vec{l}}{\iint \vec{J}\cdot d\vec{A}}=\frac{E\,l}{J\,A}\]
-        <p>Ley de OHM “puntual”</p>
-        <div class="row border-danger ">
-          <center><div class="col-md-8 pt-3 pb-3 border border-danger h1">
-            \[\rho=\frac{E}{J}\quad [&ohm; - m]\]
-          </div></center>
-          <!-- NOMBRE FORMULA -->
-        </div>
-        \[\rho : Resistividad\]
-        <p><b>Ejemplo: </b>\(\rho_{cu}=\frac{1}{56}\,\left[\frac{&ohm;\,mm^2}{m}\right]\)</p>
-        <hr>
-        <p>Luego,</p>
-        <div class="row border-danger ">
-          <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-              <div style="min-width: 550px; padding-bottom: 5px;">
-                \[R=\frac{\rho\,l}{A}\]
-            </div>
-          </div>
-          <!-- NOMBRE FORMULA -->
-          <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-              <center><b>Ecuación 11.2</b></center>
-        </div>
-        \[R\propto l\]
-        \[R\propto \frac{1}{A}\]
-        <p>La Concuctividad es una cantidad rec&iacute;proca a la Resistividad. </p>
-        <div class="row border-danger ">
-          <center><div class="col-md-8 pt-3 pb-3 border border-danger h1">
-            \[C=\frac{1}{\rho}\quad [&ohm; - m]^{-1}\]
-          </div></center>
-          <!-- NOMBRE FORMULA -->
-        </div>
-        <p>La conductancia</p>
-        <div class="row border-danger ">
-          <center><div class="col-md-8 pt-3 pb-3 border border-danger h1">
-            \[G=\frac{1}{R}\quad [&ohm;]^{-1}\]
-          </div></center>
-          <!-- NOMBRE FORMULA -->
-        </div>
-        <p>La resistencia eléctrica:</p>
-        \[R=\frac{\rho\,l}{A}\]
-        \[dR=\frac{\partial R}{\partial \rho} dR+\frac{\partial R}{\partial l} dl+\frac{\partial R}{\partial A} dA\]
-        <p>Por lo tanto,</p>
-        <div class="row border-danger ">
-          <center><div class="col-md-8 pt-3 pb-3 border border-danger h1">
-            \[R_t=R\pm dR\]
-          </div></center>
-          <!-- NOMBRE FORMULA -->
-        </div><br><br><br>
-
-        <p>¿<u>Cómo medimos / calculamos la resistencia</u>?</p>
-        
-        <p>Por F&oacute;rmula:</p>
-        <div class="row border-danger ">
-          <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-              <div style="min-width: 550px; padding-bottom: 5px;">
-                \[R=\frac{\rho\,l}{A}\]
-            </div>
-          </div>
-          <!-- NOMBRE FORMULA -->
-          <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-              <center><b>Ecuación 11.4</b></center>
-        </div>
-        <p>Con instrumentos eléctricos:</p>
-        <div class="row border-danger ">
-          <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-              <div style="min-width: 550px; padding-bottom: 5px;">
-                \[R=\frac{V}{i}\]
-            </div>
-          </div>
-          <!-- NOMBRE FORMULA -->
-          <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-              <center><b>Ecuación 11.5</b></center>
-        </div><br>
-        <p><b>11.4.1 Código de colores</b></p>
-        <div class="row border-danger ">
-          <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-              <div style="min-width: 550px; padding-bottom: 5px;">
-                \[R=A\,B\times 10^C \pm \%\,D\]
-            </div>
-          </div>
-          <!-- NOMBRE FORMULA -->
-          <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-              <center><b>Ecuación 11.6</b></center>
-        </div><br>
-        <figure>
-          <center><img class="" src="img/fig11-14.jpg" width="90%"></center><br>
-          <figcaption class="text text-center text-primary h4"><i><b>Figura 11-14 </b>Código de Colores  </i></figcaption>      
-        </figure><br>
-        <figure>
-          <center><img class="" src="img/fig11-15.png" width="90%"></center><br>
-          <figcaption class="text text-center text-primary h4"><i><b>fig11-15 </b>Tabla Código de Colores</i></figcaption>      
-        </figure><br>
-
-        <p><b>11.5 Ley de OHM</b></p>
-        <p>Si se tiene una resistencia eléctrica a la cual se aplica una diferencia de potencial formando un circuito entonces 
-          a la corriente que circula en el circuito es directamente proporcional a la diferencia de potencial. Efectuado por la 
-          fuente.</p>
-          <figure>
-          <center><img class="" src="img/fig11-16.png" width="90%"></center><br>
-          <figcaption class="text text-center text-primary h4"><i><b>Figura 11-16 </b>Ley de Ohm </i></figcaption>      
-        </figure><br>
-          <p>Ley de OHM</p>
-          \[i \propto V\]
-          \[V=R\,i\]
-          \[R=\frac{V}{i}\quad [&ohm;]\]
-          <figure>
-          <center><img class="" src="img/fig11-17.png" width="90%"></center><br>
-          <figcaption class="text text-center text-primary h4"><i><b>Figura 11-17 </b>Gr&aacute;fica 𝑉 𝑣𝑠.𝑖 </i></figcaption>      
-        </figure><br>
-
-
-          <p><b>Gr&aacute;fica: <u>V vs i </u></b></p>
-          \[tan \theta =\frac{\Delta V}{\Delta i}=R\]
-          <div class="row border-danger ">
-            <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-                <div style="min-width: 550px; padding-bottom: 5px;">
-                  \[V=R\,i\]
-              </div>
-            </div>
-            <!-- NOMBRE FORMULA -->
-            <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-                <center><b>Ecuación 11.7</b></center>
-          </div><br>
-          <p><b>11.6 Conexiones de resistencias.</b></p>
-          <p>Al igual que los condensadores de las resistencias eléctricas pueden conectarse en: serie, paralelo y mixtas.</p>
-          <p><b>11.6.1 Conexiones en serie</b></p>
-          <figure>
-          <center><img class="" src="img/fig11-18.png" width="90%"></center><br>
-          <figcaption class="text text-center text-primary h4"><i><b>Figura 9-6 </b>Conexión Serie</i></figcaption>      
-        </figure><br>
-          <p>Se conectan sobre una misma línea (un mismo cable).</p>
-          <div class="row border-danger ">
-            <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-                <div style="min-width: 550px; padding-bottom: 5px;">
-                  \[i=i_1=i_2=i_3\]
-              </div>
-            </div>
-            <!-- NOMBRE FORMULA -->
-            <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-                <center><b>Ecuación 11.8</b></center>
-          </div><br>
-          <div class="row border-danger ">
-            <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-                <div style="min-width: 550px; padding-bottom: 5px;">
-                  \[V=V_1+V_2+V_3\]
-              </div>
-            </div>
-            <!-- NOMBRE FORMULA -->
-            <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-                <center><b>Ecuación 11.9</b></center>
-          </div>
-          \[V=i_1R_1+i_2R_2+i_3R_3=i(R_1+R_2+R_3)\]
-          <div class="row border-danger ">
-            <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-                <div style="min-width: 550px; padding-bottom: 5px;">
-                  \[R_{eq}=\sum R_i\]
-              </div>
-            </div>
-            <!-- NOMBRE FORMULA -->
-            <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-                <center><b>Ecuación 11.10</b></center>
-          </div><br>
-          <p><b>11.6.2 Conexión en paralelo</b></p>
-          <figure>
-          <center><img class="" src="img/fig11-19.png" width="100%"></center><br>
-          <figcaption class="text text-center text-primary h4"><i><b>Figura 9-6 </b>Conexión en Paralelo </i></figcaption>      
-        </figure><br>
-          <div class="row border-danger ">
-            <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-                <div style="min-width: 550px; padding-bottom: 5px;">
-                  \[i=i_1+i_2+i_3\]
-              </div>
-            </div>
-            <!-- NOMBRE FORMULA -->
-            <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-                <center><b>Ecuación 11.11</b></center>
-          </div><br>
-          <div class="row border-danger ">
-            <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-                <div style="min-width: 550px; padding-bottom: 5px;">
-                  \[V=V_1=V_2=V_3\]
-              </div>
-            </div>
-            <!-- NOMBRE FORMULA -->
-            <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-                <center><b>Ecuación 11.12</b></center>
-          </div>
-          \[i=\frac{V_1}{R_1}+\frac{V_2}{R_2}+\frac{V_3}{R_3}\]
-          \[i=v\left(\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}\right)\]
-          <div class="row border-danger ">
-            <div class="col-md-9 pt-3 pb-3 border border-danger h1 escala">
-                <div style="min-width: 550px; padding-bottom: 5px;">
-                  \[\frac{1}{R_{eq}}=\sum \frac{1}{R_i}\]
-              </div>
-            </div>
-            <!-- NOMBRE FORMULA -->
-            <div class="col-md-3 pt-3 pb-3 border border-danger h4">
-                <center><b>Ecuación 11.13</b></center>
-          </div><br>
-
-
-
-
-
-
 
 
         
